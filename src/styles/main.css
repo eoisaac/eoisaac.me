@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* https://tailwindcss.com/docs/customizing-colors#using-css-variable */
+@layer base {
+  :root {    
+    --title-primary: 255 255 255;
+    --text-primary: 229 233 240;
+    --text-secondary: 96 123 150;
+
+    --base-lines: 30 45 61;
+
+    --gradient-blue: 77 91 206;
+    --gradient-green: 67 217 173; 
+
+    --auxiliary-blue: 60 157 147;
+    --auxiliary-green: 77 91 206;
+
+    --accent-orange: 254 165 95;
+    --accent-green: 67 217 173;
+    --accent-red: 233 146 135;
+    --accent-violet: 201 139 223;
+
+    --shape-primary: 1 18 33; 
+    --shape-secondary: 1 8 14;
+    --base-background: 1 22 39;
+  }
+}
+
+/* * {
+  outline: none;
+} */
+
+::selection {
+  color: theme(colors.text-primary); 
+  background-color: theme(colors.accent-red);
+}
+
+:focus {
+  border-radius: theme(borderRadius.sm);
+  box-shadow: 0 0 0 1px theme(colors.accent-green);
+}
+
+::-webkit-scrollbar {
+  width: theme(borderWidth.2);
+  height: theme(borderWidth.2);
+  background-color: theme(colors.shape-primary);
+}
+  
+::-webkit-scrollbar-thumb {
+  border-radius: theme(borderRadius.2xl);
+  background-color: theme(colors.base-lines);
+}
+
+body {
+  font-size: theme(fontSize.base);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  color: theme(colors.text-primary);
+  -webkit-font-smoothing: antialiased;
+  background-color: theme(colors.base-background);
+}
