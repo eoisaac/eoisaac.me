@@ -1,9 +1,8 @@
 import {
-  CaretUp,
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
-  TwitterLogo,
+  TwitterLogo
 } from 'phosphor-react'
 
 export const Footer = () => {
@@ -18,8 +17,8 @@ export const Footer = () => {
       className="w-full flex items-center justify-between py-3 border-t 
       border-t-base-lines shadow-md bg-base-background"
     >
-      <div className="container flex justify-between items-center">
-        <div className="flex gap-1 items-center ">
+      <div className="container flex justify-between items-center px-0">
+        <div className="flex gap-2 items-center ">
           <ul className="flex gap-2 items-center ">
             <li>
               <a
@@ -66,9 +65,9 @@ export const Footer = () => {
             | eoisaac &copy; 2022
           </span>
         </div>
-        <button className={styles.icon} onClick={scrollToTop}>
+        {/* <button className={styles.icon} onClick={scrollToTop}>
           <CaretUp />
-        </button>
+        </button> */}
       </div>
     </footer>
   )

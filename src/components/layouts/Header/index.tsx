@@ -17,16 +17,14 @@ export const Header = () => {
 
   const menuItemStyles = {
     item: 'block w-full md:w-auto text-end',
-    link: `block px-4 py-2 border-base-lines border-y-[1px] md:border-x-[1px] 
-    md:border-t-0 -mb-[1px] md:-mx-[0.5px] border-b-2 border-b-transparent
-    text-text-secondary hover:text-text-primary hover:border-b-auxiliary-blue`,
+    link: `block px-4 py-2 border-b-2 border-b-transparent text-text-secondary 
+    hover:text-text-primary/[0.8] hover:border-b-accent-orange/[0.7]`,
   }
 
   return (
     <header
-      className="w-full flex items-center justify-between fixed p-3 
-      md:px-0 md:py-0 md:pr-[1px] border-b border-b-base-lines shadow-md z-50
-      bg-base-background"
+      className="w-full flex items-center justify-between fixed p-4 md:p-0
+      md:pt-[1px] border-b border-b-base-lines shadow-md z-50 bg-base-background"
     >
       <div
         className="w-full flex items-center justify-between md:justify-start 
@@ -34,7 +32,7 @@ export const Header = () => {
       >
         <h2
           className="min-w-fit font-mono text-text-secondary text-base md:pl-4 
-          pr-4 md:pr-20 lg:pr-32 overflow-hidden"
+          pr-4 md:pr-20 lg:pr-32 overflow-"
         >
           isaac-santiago
         </h2>
