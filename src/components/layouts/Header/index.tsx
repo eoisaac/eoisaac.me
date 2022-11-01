@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useMediaQuery } from '../../../hooks/useMediaQuery'
 
 export const Header = () => {
-  const isDesktop = useMediaQuery('(min-width: 640px)')
+  const isDesktop = useMediaQuery('(min-width: 768px)')
   const [menuVisibility, setMenuVisibility] = useState<boolean>(false)
 
   const handleMenuVisibility = () => {
@@ -16,34 +16,35 @@ export const Header = () => {
   }, [isDesktop])
 
   const menuItemStyles = {
-    item: 'block w-full sm:w-auto text-end',
-    link: `block px-4 py-2 border-base-lines border-y-[1px] sm:border-x-[1px] 
-    sm:border-t-0 -mb-[1px] sm:-mx-[0.5px] border-b-2 border-b-transparent
-    text-text-secondary hover:text-text-primary hover:border-b-text-secondary`,
+    item: 'block w-full md:w-auto text-end',
+    link: `block px-4 py-2 border-base-lines border-y-[1px] md:border-x-[1px] 
+    md:border-t-0 -mb-[1px] md:-mx-[0.5px] border-b-2 border-b-transparent
+    text-text-secondary hover:text-text-primary hover:border-b-auxiliary-blue`,
   }
 
   return (
     <header
       className="w-full flex items-center justify-between fixed mt-[1px] p-2
-      sm:px-0 sm:py-0 border-b border-b-base-lines bg-base-background z-50"
+      md:px-0 md:py-0 md:pr-[1px] border-b border-b-base-lines bg-base-background z-50 
+      shadow-md"
     >
       <div
-        className="w-full flex gap-4 items-center justify-between 
-      sm:justify-start bg-base-background"
+        className="w-full flex items-center justify-between md:justify-start 
+      bg-base-background"
       >
-        <h2 className="font-mono text-text-secondary text-base sm:pl-2 md:pr-32">
+        <h2 className="font-mono text-text-secondary text-base md:pl-2 pr-20 lg:pr-32">
           isaac_santiago
         </h2>
 
-        <nav className="w-full flex justify-end sm:justify-start gap-1">
+        <nav className="w-full flex justify-end md:justify-start gap-1">
           <ul
-            className={`w-full flex flex-col sm:flex-row absolute 
-            sm:relative inset-x-0 p-1 sm:p-0 bg-base-background  
+            className={`w-full flex flex-col md:flex-row absolute 
+            md:relative inset-x-0 p-1 md:p-0 bg-base-background  
             transition-all ${menuVisibility ? 'top-full' : '-top-[500px]'}
             `}
           >
             <li className={menuItemStyles.item}>
-              <NavLink to="/" className={menuItemStyles.link}>
+              <NavLink to="/home" className={menuItemStyles.link}>
                 _home
               </NavLink>
             </li>
@@ -69,15 +70,15 @@ export const Header = () => {
             </li>
           </ul>
 
-          <button
-            className="relative sm:hidden z-40 text-text-secondary text-2xl bg-base-background"
-            onClick={handleMenuVisibility}
-          >
-            {menuVisibility ? <X /> : <List />}
-          </button>
-          <button
+          {/* <button
             className="relative p-2 mr-[1px] text-text-secondary text-2xl 
           bg-base-background hover:text-text-primary"
+          >
+            <Command /> <Compass />
+          </button> */}
+          <button
+            className="relative md:hidden z-40 text-text-secondary text-2xl bg-base-background"
+            onClick={handleMenuVisibility}
           >
             {menuVisibility ? <X /> : <List />}
           </button>

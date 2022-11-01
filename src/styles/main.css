@@ -28,9 +28,19 @@
   }
 }
 
-/* * {
+* {
   outline: none;
-} */
+}
+
+body {
+  font-size: theme(fontSize.base);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  color: theme(colors.text-primary);
+  -webkit-font-smoothing: antialiased;
+  background-color: theme(colors.base-background);
+}
 
 ::selection {
   color: theme(colors.text-primary); 
@@ -53,12 +63,6 @@
   background-color: theme(colors.base-lines);
 }
 
-body {
-  font-size: theme(fontSize.base);
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
-  line-height: 160%;
-  color: theme(colors.text-primary);
-  -webkit-font-smoothing: antialiased;
-  background-color: theme(colors.base-background);
+header div nav ul li a.active {
+  @apply border-b-accent-orange
 }
