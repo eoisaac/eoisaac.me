@@ -24,23 +24,27 @@ export const Header = () => {
 
   return (
     <header
-      className="w-full flex items-center justify-between fixed mt-[1px] p-2
-      md:px-0 md:py-0 md:pr-[1px] border-b border-b-base-lines bg-base-background z-50 
-      shadow-md"
+      className="w-full flex items-center justify-between fixed p-3 
+      md:px-0 md:py-0 md:pr-[1px] border-b border-b-base-lines shadow-md z-50
+      bg-base-background"
     >
       <div
         className="w-full flex items-center justify-between md:justify-start 
       bg-base-background"
       >
-        <h2 className="font-mono text-text-secondary text-base md:pl-2 pr-20 lg:pr-32">
-          isaac_santiago
+        <h2
+          className="min-w-fit font-mono text-text-secondary text-base md:pl-4 
+          pr-4 md:pr-20 lg:pr-32 overflow-hidden"
+        >
+          isaac-santiago
         </h2>
 
         <nav className="w-full flex justify-end md:justify-start gap-1">
           <ul
-            className={`w-full flex flex-col md:flex-row absolute 
-            md:relative inset-x-0 p-1 md:p-0 bg-base-background  
+            className={`w-full flex flex-col md:flex-row absolute md:relative 
+            inset-x-0 px-1 md:p-0 bg-base-background  
             transition-all ${menuVisibility ? 'top-full' : '-top-[500px]'}
+            border-b-[1px] border-base-lines sm:border-0
             `}
           >
             <li className={menuItemStyles.item}>

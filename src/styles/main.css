@@ -7,7 +7,7 @@
   :root {    
     --title-primary: 255 255 255; /* #FFFFFF */
     --text-primary: 229 233 240; /* #E5E9F0 */
-    --text-secondary: 96 123 150; /* #607B96 */
+    --text-secondary:  103 130 158; /* #67829E */
 
     --base-lines: 30 45 61; /* #1E2D3D */
 
@@ -39,6 +39,7 @@ body {
   line-height: 160%;
   color: theme(colors.text-primary);
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
   background-color: theme(colors.base-background);
 }
 
@@ -64,5 +65,17 @@ body {
 }
 
 header div nav ul li a.active {
-  @apply border-b-accent-orange
+  @apply border-b-accent-orange text-title-primary
+}
+
+.page {
+  @apply h-full w-full
+}
+
+.container {
+  @apply w-full max-w-7xl mx-auto px-3
+}
+
+.container-screen {
+  @apply h-full w-full max-w-7xl mx-auto pt-14 pb-3 px-3
 }
