@@ -6,8 +6,8 @@ export const Header = () => {
   const { query } = useKBar()
 
   const menuItemStyles = {
-    link: `block px-4 py-2 border-b-2 border-b-transparent text-text-secondary 
-    hover:text-text-primary/[0.8] hover:border-b-accent-orange/[0.7] 
+    link: `block px-4 py-2 border-b-2 border-b-transparent text-text-primary 
+    hover:text-text-accent/[0.8] hover:border-b-accent-orange/[0.7] 
     whitespace-nowrap`,
   }
 
@@ -25,7 +25,8 @@ export const Header = () => {
             <NavLink
               to="/home"
               className="block p-2 text-text-secondary ml-[1px] rounded-md
-              bg-base-background hover:text-text-primary hover:bg-shape-secondary/[0.8]"
+              bg-base-background hover:text-text-accent 
+              hover:bg-shape-secondary/[0.8]"
             >
               <span className="block text-2xl leading-none font-mono font-bold">
                 iS
@@ -68,7 +69,7 @@ export const Header = () => {
 
           <button
             className="p-2 text-text-secondary text-2xl mr-[1px] rounded-md
-          bg-base-background hover:text-text-primary hover:bg-shape-secondary/[0.8]"
+          bg-base-background hover:text-text-accent hover:bg-shape-secondary/[0.8]"
             onClick={query.toggle}
           >
             <Command />

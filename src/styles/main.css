@@ -6,8 +6,8 @@
 @layer base {
   :root {    
     --title-primary: 255 255 255; /* #FFFFFF */
-    --text-primary: 229 233 240; /* #E5E9F0 */
-    --text-secondary:  103 130 158; /* #67829E */
+    --text-primary:  103 130 158; /* #67829E */
+    --text-accent: 229 233 240; /* #E5E9F0 */
 
     --base-lines: 30 45 61; /* #1E2D3D */
 
@@ -33,36 +33,27 @@
 }
 
 body {
-  font-size: theme(fontSize.base);
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
-  line-height: 160%;
-  color: theme(colors.text-primary);
-  -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-  background-color: theme(colors.base-background);
+  @apply font-sans font-normal text-text-primary antialiased 
+  scroll-smooth bg-base-background 
 }
 
 ::selection {
-  color: theme(colors.base-background); 
-  background-color: theme(colors.accent-green);
+  @apply text-base-background bg-accent-orange
 }
 
 :focus {
-  border-radius: theme(borderRadius.sm);
-  box-shadow: 0 0 0 1px theme(colors.accent-green);
+  @apply rounded-sm shadow-[0_0_0_1px] shadow-accent-orange
 }
 
 ::-webkit-scrollbar {
-  width: theme(borderWidth.2);
-  height: theme(borderWidth.2);
-  background-color: theme(colors.shape-primary);
+  @apply w-[2px] h-[2px] bg-shape-primary
 }
   
 ::-webkit-scrollbar-thumb {
-  border-radius: theme(borderRadius.2xl);
-  background-color: theme(colors.base-lines);
+  @apply rounded-2xl bg-base-lines
 }
+
+/* Utility classes */
 
 header div nav  a.active {
   @apply border-b-accent-orange text-title-primary
@@ -70,9 +61,30 @@ header div nav  a.active {
 
 .container,
 .container-screen {
-  @apply flex-1 max-w-7xl mx-auto px-4
+  @apply flex-1 max-w-5xl mx-auto px-4
 }
 
 .container-screen {
   @apply pt-28 sm:pt-16 pb-4
+}
+
+.section {
+  @apply flex flex-col gap-4 text-text-primary
+}
+
+.title {
+  @apply text-3xl font-medium text-title-primary 
+}
+
+.subtitle {
+  @apply text-2xl font-medium text-text-accent
+}
+
+.link {
+  @apply cursor-pointer text-gradient-green relative pb-[1px] mx-[0.5ch]
+  hover:text-text-accent before:content-[''] before:absolute 
+  before:block before:w-full before:h-[1px] before:bottom-0 before:left-0 
+  before:bg-gradient-green before:hover:scale-x-100 
+  before:scale-x-0 before:origin-top-left 
+  before:transition before:ease-in-out before:duration-200
 }

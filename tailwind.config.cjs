@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         'title-primary': 'rgb(var(--title-primary) / <alpha-value>)',
         'text-primary': 'rgb(var(--text-primary) / <alpha-value>)',
-        'text-secondary': 'rgb(var(--text-secondary) / <alpha-value>)',
+        'text-accent': 'rgb(var(--text-accent) / <alpha-value>)',
 
         'base-lines': 'rgb(var(--base-lines) / <alpha-value>)',
 

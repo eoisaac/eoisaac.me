@@ -10,14 +10,14 @@ export const Home = () => {
         sm:justify-center gap-14"
       >
         <div className="flex flex-col gap-2">
-          <span className="font-mono text-lg text-text-secondary">
-            Hi, I&apos;m
+          <span className="font-mono text-lg text-text-primary">
+            Hi, my name is
           </span>
           <h1 className="font-sans font-medium text-6xl text-title-primary -indent-1">
             Isaac Santiago
           </h1>
           <strong
-            className="font-mono font-normal text-[1.3rem] sm:text-3xl
+            className="font-mono font-normal text-[1.25rem] sm:text-3xl
             text-gradient-blue"
           >
             &gt; Frontend developer
@@ -25,7 +25,7 @@ export const Home = () => {
         </div>
 
         <div
-          className="text-text-secondary flex flex-col justify-start 
+          className="text-text-primary flex flex-col justify-start 
           items-start gap-4"
         >
           <div>
@@ -46,7 +46,7 @@ export const Home = () => {
         className="flex-1 hidden md:flex flex-col items-start justify-evenly 
         sm:justify-center gap-14"
       >
-        <p className="text-text-secondary opacity-0">
+        <p className="text-text-primary opacity-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia at,
           sapiente eveniet sunt minima saepe illum mollitia veniam molestias
           inventore tempora, debitis assumenda sed recusandae eos. Rerum
@@ -54,11 +54,11 @@ export const Home = () => {
         </p>
       </aside>
       <div
-        className="absolute top-16 sm:top-32 right-16 sm:right-64 w-72 h-72 
+        className="absolute top-16 sm:top-16 right-28 sm:right-36 w-72 h-72 
         bg-gradient-blue rounded-full filter blur-[96px] bg-opacity-50 -z-10"
       />
       <div
-        className="absolute bottom-16 sm:bottom-32 right-0 sm:right-16 w-72 h-72 
+        className="absolute bottom-16 sm:bottom-32 right-0 sm:right-8 w-72 h-72 
         bg-gradient-green rounded-full filter blur-[96px] bg-opacity-50 -z-10"
       />
     </div>

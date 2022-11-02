@@ -2,12 +2,12 @@ import {
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
-  TwitterLogo
+  TwitterLogo,
 } from 'phosphor-react'
 
 export const Footer = () => {
   const styles = {
-    icon: 'block text-text-secondary text-2xl hover:text-accent-green',
+    icon: 'block text-text-primary text-2xl hover:text-accent-green',
   }
 
   // const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -64,7 +64,7 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-          <span className="text-sm text-text-secondary">
+          <span className="text-sm text-text-primary">
             | eoisaac &copy; 2022
           </span>
         </div>
