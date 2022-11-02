@@ -34,32 +34,37 @@ export const Header = () => {
             </NavLink>
           </button>
 
-          <ul
-            className="flex items-center justify-center absolute p-[1px] pb-0 
-            sm:relative top-full inset-x-0 overflow-auto bg-base-background 
-            transition-all border-b-[1px] border-base-lines sm:border-0"
+          <div
+            className="absolute sm:relative top-full inset-x-0 overflow-auto 
+          p-[1px] pb-0 border-b-[1px] border-base-lines sm:border-0
+          transition-all bg-base-background"
           >
-            <li>
-              <NavLink to="/about" className={menuItemStyles.link}>
-                About me
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/projects" className={menuItemStyles.link}>
-                My projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/posts" className={menuItemStyles.link}>
-                Posts
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" className={menuItemStyles.link}>
-                Contact me
-              </NavLink>
-            </li>
-          </ul>
+            <ul
+              className="inline-flex items-center justify-center mr-[1px] 
+            sm:mr-0"
+            >
+              <li>
+                <NavLink to="/about" className={menuItemStyles.link}>
+                  About me
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/projects" className={menuItemStyles.link}>
+                  My projects
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/posts" className={menuItemStyles.link}>
+                  Posts
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className={menuItemStyles.link}>
+                  Contact me
+                </NavLink>
+              </li>
+            </ul>
+          </div>
 
           <button
             className="p-2 text-text-secondary text-2xl mr-[1px] rounded-md
