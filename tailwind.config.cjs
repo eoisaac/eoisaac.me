@@ -16,7 +16,7 @@ module.exports = {
         'base-lines': 'rgb(var(--base-lines) / <alpha-value>)',
 
         'gradient-blue': 'rgb(var(--gradient-blue) / <alpha-value>)',
-        'gradient-green:': 'rgb(var(--gradient-green:) / <alpha-value>)',
+        'gradient-green': 'rgb(var(--gradient-green) / <alpha-value>)',
 
         'auxiliary-blue': 'rgb(var(--auxiliary-blue) / <alpha-value>)',
         'auxiliary-green': 'rgb(var(--auxiliary-green) / <alpha-value>)',

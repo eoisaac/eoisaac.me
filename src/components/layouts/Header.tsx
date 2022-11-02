@@ -1,7 +1,7 @@
 import { List, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useMediaQuery } from '../../../hooks/useMediaQuery'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 export const Header = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)')

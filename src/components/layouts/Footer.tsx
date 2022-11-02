@@ -2,7 +2,7 @@ import {
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
-  TwitterLogo
+  TwitterLogo,
 } from 'phosphor-react'
 
 export const Footer = () => {
@@ -10,12 +10,12 @@ export const Footer = () => {
     icon: 'block text-text-secondary text-2xl hover:text-accent-green',
   }
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+  // const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
     <footer
       className="w-full flex items-center justify-between py-3 border-t 
-      border-t-base-lines shadow-md bg-base-background"
+      border-t-base-lines shadow-md bg-base-background relative z-20"
     >
       <div className="container flex justify-between items-center px-0">
         <div className="flex gap-2 items-center ">
