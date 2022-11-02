@@ -2,7 +2,7 @@ import {
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
-  TwitterLogo,
+  TwitterLogo
 } from 'phosphor-react'
 
 export const Footer = () => {
@@ -14,10 +14,13 @@ export const Footer = () => {
 
   return (
     <footer
-      className="w-full flex items-center justify-between py-3 border-t 
-      border-t-base-lines shadow-md bg-base-background relative z-20"
+      className="w-full py-3 border-t border-t-base-lines shadow-md 
+    bg-base-background"
     >
-      <div className="container flex justify-between items-center px-0">
+      <div
+        className="container flex justify-center sm:justify-start 
+      items-center px-0"
+      >
         <div className="flex gap-2 items-center ">
           <ul className="flex gap-2 items-center ">
             <li>

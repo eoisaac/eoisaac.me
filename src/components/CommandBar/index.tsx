@@ -10,13 +10,11 @@ import { ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { RenderResults } from './components/RenderResults'
 
-interface KBarNavigationProviderProps {
+interface CommandBarProps {
   children: ReactNode
 }
 
-export const KBarNavigationProvider = ({
-  children,
-}: KBarNavigationProviderProps) => {
+export const CommandBar = ({ children }: CommandBarProps) => {
   const navigate = useNavigate()
 
   const actions = [
@@ -65,7 +63,7 @@ export const KBarNavigationProvider = ({
   return (
     <KBarProvider actions={actions}>
       <KBarPortal>
-        <KBarPositioner>
+        <KBarPositioner className="absolute z-50 bg-base-background/30">
           <KBarAnimator>
             <KBarSearch className="text-base-background" />
             <RenderResults />

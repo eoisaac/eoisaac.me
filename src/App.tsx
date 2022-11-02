@@ -1,14 +1,14 @@
 import { BrowserRouter } from 'react-router-dom'
+import { CommandBar } from './components/CommandBar'
 import { AppRoutes } from './routes/AppRoutes'
-import { KBarNavigationProvider } from './services/KBar/KBarNavigationProvider'
 import './styles/main.css'
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <KBarNavigationProvider>
+      <CommandBar>
         <AppRoutes />
-      </KBarNavigationProvider>
+      </CommandBar>
     </BrowserRouter>
   )
 }

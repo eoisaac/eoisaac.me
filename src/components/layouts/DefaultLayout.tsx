@@ -4,7 +4,7 @@ import { Header } from './Header'
 
 export const DefaultLayout = () => {
   return (
-    <div className="w-screen relative">
+    <div className="min-h-screen w-screen flex flex-col">
       <Header />
       <Outlet />
       <Footer />

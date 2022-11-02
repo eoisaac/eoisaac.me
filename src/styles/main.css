@@ -44,8 +44,8 @@ body {
 }
 
 ::selection {
-  color: theme(colors.text-primary); 
-  background-color: theme(colors.accent-red);
+  color: theme(colors.base-background); 
+  background-color: theme(colors.accent-green);
 }
 
 :focus {
@@ -64,14 +64,15 @@ body {
   background-color: theme(colors.base-lines);
 }
 
-header div nav ul li a.active {
+header div nav  a.active {
   @apply border-b-accent-orange text-title-primary
 }
 
-.container {
-  @apply w-full max-w-7xl mx-auto px-3
+.container,
+.container-screen {
+  @apply flex-1 max-w-7xl mx-auto px-4
 }
 
 .container-screen {
-  @apply min-h-screen w-full max-w-7xl mx-auto pt-14 pb-3 px-3
+  @apply pt-28 sm:pt-16 pb-4
 }

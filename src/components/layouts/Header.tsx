@@ -1,88 +1,72 @@
-import { Command, List, X } from 'phosphor-react'
-import { useEffect, useState } from 'react'
+import { useKBar } from 'kbar'
+import { Command } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
-import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 export const Header = () => {
-  const isDesktop = useMediaQuery('(min-width: 768px)')
-  const [menuVisibility, setMenuVisibility] = useState<boolean>(false)
-
-  const handleMenuVisibility = () => {
-    if (!isDesktop) setMenuVisibility((prevState) => !prevState)
-  }
-
-  useEffect(() => {
-    isDesktop ? setMenuVisibility(true) : setMenuVisibility(false)
-  }, [isDesktop])
+  const { query } = useKBar()
 
   const menuItemStyles = {
-    item: 'block w-full md:w-auto text-end',
     link: `block px-4 py-2 border-b-2 border-b-transparent text-text-secondary 
-    hover:text-text-primary/[0.8] hover:border-b-accent-orange/[0.7]`,
+    hover:text-text-primary/[0.8] hover:border-b-accent-orange/[0.7] 
+    whitespace-nowrap`,
   }
 
   return (
     <header
-      className="w-full flex items-center justify-between fixed p-4 md:p-0
-      md:pt-[1px] border-b border-b-base-lines shadow-md z-50 bg-base-background"
+      className="w-full flex items-center justify-between fixed px-3 py-1 sm:pb-0
+     border-b border-b-base-lines shadow-md z-50 bg-base-background"
     >
       <div
         className="w-full flex items-center justify-between md:justify-start 
       bg-base-background"
       >
-        <h2
-          className="min-w-fit font-mono text-text-secondary text-base md:pl-4 
-          pr-4 md:pr-20 lg:pr-32 overflow-"
-        >
-          isaac-santiago
-        </h2>
+        <nav className="w-full flex items-center justify-between gap-1">
+          <button>
+            <NavLink
+              to="/home"
+              className="block p-2 text-text-secondary ml-[1px] rounded-md
+              bg-base-background hover:text-text-primary hover:bg-shape-secondary/[0.8]"
+            >
+              <span className="block text-2xl leading-none font-mono font-bold">
+                iS
+              </span>
+              <span className="sr-only">Isaac Santiago</span>
+            </NavLink>
+          </button>
 
-        <nav className="w-full flex justify-end md:justify-start gap-1">
           <ul
-            className={`w-full flex flex-col md:flex-row absolute md:relative 
-            inset-x-0 px-1 md:p-0 bg-base-background  
-            transition-all ${menuVisibility ? 'top-full' : '-top-[500px]'}
-            border-b-[1px] border-base-lines sm:border-0
-            `}
+            className="flex items-center justify-center absolute p-[1px] pb-0 
+            sm:relative top-full inset-x-0 overflow-auto bg-base-background 
+            transition-all border-b-[1px] border-base-lines sm:border-0"
           >
-            <li className={menuItemStyles.item}>
-              <NavLink to="/home" className={menuItemStyles.link}>
-                _home
-              </NavLink>
-            </li>
-            <li className={menuItemStyles.item}>
+            <li>
               <NavLink to="/about" className={menuItemStyles.link}>
-                _about-me
+                About me
               </NavLink>
             </li>
-            <li className={menuItemStyles.item}>
+            <li>
               <NavLink to="/projects" className={menuItemStyles.link}>
-                _my-projects
+                My projects
               </NavLink>
             </li>
-            <li className={menuItemStyles.item}>
+            <li>
               <NavLink to="/posts" className={menuItemStyles.link}>
-                _posts
+                Posts
               </NavLink>
             </li>
-            <li className={`${menuItemStyles.item} ml-auto`}>
+            <li>
               <NavLink to="/contact" className={menuItemStyles.link}>
-                _contact-me
+                Contact me
               </NavLink>
             </li>
           </ul>
 
           <button
-            className="relative p-2 text-text-secondary text-2xl mr-[1px]
-          bg-base-background hover:text-text-primary"
+            className="p-2 text-text-secondary text-2xl mr-[1px] rounded-md
+          bg-base-background hover:text-text-primary hover:bg-shape-secondary/[0.8]"
+            onClick={query.toggle}
           >
             <Command />
-          </button>
-          <button
-            className="relative md:hidden z-40 text-text-secondary text-2xl bg-base-background"
-            onClick={handleMenuVisibility}
-          >
-            {menuVisibility ? <X /> : <List />}
           </button>
         </nav>
       </div>
