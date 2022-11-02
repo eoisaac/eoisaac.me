@@ -1,4 +1,4 @@
-import { List, X } from 'phosphor-react'
+import { Command, List, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
@@ -72,12 +72,12 @@ export const Header = () => {
             </li>
           </ul>
 
-          {/* <button
-            className="relative p-2 mr-[1px] text-text-secondary text-2xl 
+          <button
+            className="relative p-2 text-text-secondary text-2xl mr-[1px]
           bg-base-background hover:text-text-primary"
           >
-            <Command /> <Compass />
-          </button> */}
+            <Command />
+          </button>
           <button
             className="relative md:hidden z-40 text-text-secondary text-2xl bg-base-background"
             onClick={handleMenuVisibility}

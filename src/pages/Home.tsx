@@ -28,7 +28,7 @@ export const Home = () => {
             <p>
               Programming and technology lover. I like coffee and JavaScript.
             </p>
-            <p>I&apos;m currently learning React and Typescript</p>
+            <p>I&apos;m currently learning React and Typescript.</p>
           </div>
           <button className="block bg-orange-400">
             <span>Press</span>
