@@ -69,7 +69,7 @@ export const About = () => {
             <div className="flex flex-start items-center relative">
               <div
                 className="bg-base-lines w-2 h-2 flex items-center absolute
-              justify-center rounded-full -top-1 -left-1"
+              justify-center rounded-full -top-1 -left-[4.5px]"
               />
               <h4
                 className="font-mono text-text-accent font-medium text-lg 
@@ -100,38 +100,7 @@ export const About = () => {
             <div className="flex flex-start items-center relative">
               <div
                 className="bg-base-lines w-2 h-2 flex items-center absolute
-              justify-center rounded-full -top-1 -left-1"
-              />
-              <h4
-                className="font-mono text-text-accent font-medium text-lg 
-                sm:text-xl ml-3 -mt-3"
-              >
-                Internship at
-                <a
-                  href="https://www.zumpy.com.br/"
-                  target="_blank"
-                  className="link"
-                  rel="noreferrer"
-                >
-                  @Zumpy
-                </a>
-              </h4>
-            </div>
-            <div className="ml-6 mb-6">
-              <span className="text-sm">Jun 2022 - Present</span>
-              <p className="text-text-primary mt-2 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </li>
-          <li>
-            <div className="flex flex-start items-center relative">
-              <div
-                className="bg-base-lines w-2 h-2 flex items-center absolute
-              justify-center rounded-full -top-1 -left-1"
+              justify-center rounded-full -top-1 -left-[4.5px]"
               />
               <h4
                 className="font-mono text-text-accent font-medium text-lg 
