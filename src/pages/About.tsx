@@ -11,7 +11,6 @@ export const About = () => {
   return (
     <main className="container-screen section">
       <h1 className="title">About me</h1>
-
       <div
         className="flex flex-col md:flex-row items-center md:items-start 
         justify-start gap-4 md:gap-16"
@@ -60,7 +59,6 @@ export const About = () => {
       <section className="section">
         <h2 className="subtitle">Technologies</h2>
       </section>
-
       <section className="section">
         <h2 className="subtitle">Where I&apos;ve Worked</h2>
 

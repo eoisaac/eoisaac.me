@@ -4,7 +4,7 @@ export const Home = () => {
   const { query } = useKBar()
 
   return (
-    <div className="container-screen flex flex-col md:flex-row gap-8 relative">
+    <div className="container-screen flex flex-col md:flex-row gap-8">
       <main
         className="flex-1 flex flex-col items-start justify-evenly
         sm:justify-center gap-14"

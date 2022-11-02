@@ -65,7 +65,7 @@ header div nav  a.active {
 }
 
 .container-screen {
-  @apply pt-28 sm:pt-16 pb-4
+  @apply pt-28 sm:pt-16 pb-4 relative
 }
 
 .section {
@@ -73,7 +73,7 @@ header div nav  a.active {
 }
 
 .title {
-  @apply text-3xl font-medium text-title-primary 
+  @apply text-3xl font-medium text-title-primary
 }
 
 .subtitle {

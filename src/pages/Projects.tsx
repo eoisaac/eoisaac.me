@@ -49,6 +49,10 @@ export const Projects = () => {
     },
   ]
 
+  const featuredProjects = projects.filter((project) =>
+    project.topics.includes('featured'),
+  )
+
   return (
     <main className="container-screen section">
       <h1 className="title">My Projects</h1>
@@ -66,12 +70,9 @@ export const Projects = () => {
           className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
       gap-4"
         >
-          {projects.map((project) => {
-            const isFeatured = project.topics.includes('featured')
-            return (
-              isFeatured && <ProjectCard key={project.id} project={project} />
-            )
-          })}
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </ul>
       </section>
 
