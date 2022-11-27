@@ -1,18 +1,20 @@
 import { QueryClientProvider } from 'react-query'
 import { BrowserRouter } from 'react-router-dom'
-import { CommandBar } from './components/CommandBar'
+import { ThemeProvider } from 'styled-components'
 import { AppRoutes } from './routes/AppRoutes'
 import { queryClient } from './services/reactQuery/client'
-import './styles/main.css'
+import { GlobalStyle } from './styles/global'
+import { DarkTheme } from './styles/themes/dark'
 
 export const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <CommandBar>
+      <ThemeProvider theme={DarkTheme}>
+        <GlobalStyle />
+        <BrowserRouter>
           <AppRoutes />
-        </CommandBar>
-      </BrowserRouter>
+        </BrowserRouter>
+      </ThemeProvider>
     </QueryClientProvider>
   )
 }

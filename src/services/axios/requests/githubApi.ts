@@ -2,11 +2,11 @@ import { github } from '../instances'
 
 const GITHUB = {
   USER: 'eoisaac',
-  REPOSITORY: 'GitHub_Blog',
+  REPOSITORY: 'eoisaac.me',
 }
 
-export const getUserProfile = async () => {
-  const response = await github.get(`/users/${GITHUB.USER}`)
+export const getProjects = async () => {
+  const response = await github.get(`/users/${GITHUB.USER}/repos`)
 
   return response.data
 }
