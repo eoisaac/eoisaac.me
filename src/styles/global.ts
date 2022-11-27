@@ -3,7 +3,7 @@ import { normalize } from './normalize'
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
-  
+
   body {
     font-size: 1rem;
     line-height: 150%;
@@ -11,18 +11,22 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     color: ${(props) => props.theme.color['base-400']};
     -webkit-font-smoothing: antialiased;
-    background-color: ${(props) => props.theme.color['base-100']};
+    scroll-behavior: smooth;
+    background-color: ${(props) => props.theme.color['base-900']};
   }
+
   :focus {
     outline: transparent;
     border-radius: ${(props) => props.theme.rounded.base};
     overflow: hidden;
     box-shadow: 0 0 0 2px ${(props) => props.theme.color['brand-600']};
   }
+
   ::selection {
-		color: ${(props) => props.theme.color['base-200']};
+    color: ${(props) => props.theme.color['base-200']};
     background-color: ${(props) => props.theme.color['brand-700']};
   }
+
   ::-webkit-scrollbar {
     width: 3px;
     height: 3px;

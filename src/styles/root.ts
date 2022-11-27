@@ -1,12 +1,13 @@
 export const Root = {
   spacing: {
+    px: '1px',
     xxs: '0.25rem',
-    xs: ' 0.5rem',
-    sm: ' 0.875rem',
-    md: ' 1rem',
-    lg: ' 2rem',
-    xl: ' 3rem',
-    xxl: ' 4rem',
+    xs: '0.5rem',
+    sm: '0.875rem',
+    md: '1rem',
+    lg: '2rem',
+    xl: '3rem',
+    xxl: '4rem',
   },
   font: {
     light: 300,
@@ -31,12 +32,11 @@ export const Root = {
     lg: ' 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)',
   },
   screen: {
-    xxs: '(min-width: 330px)',
-    xs: '(min-width: 480px)',
-    sm: '(min-width: 640px)',
-    md: '(min-width: 768px)',
-    lg: '(min-width: 1024px)',
-    xl: '(min-width: 1280px)',
-    xxl: '(min-width: 1536px)',
+    xs: '480px',
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    xxl: '1536px',
   },
 } as const
