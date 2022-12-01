@@ -32,11 +32,11 @@ export const Root = {
     lg: ' 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)',
   },
   screen: {
-    xs: '480px',
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
-    xxl: '1536px',
+    xs: '(min-width: 480px)',
+    sm: '(min-width: 640px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 1024px)',
+    xl: '(min-width: 1280px)',
+    xxl: '(min-width: 1536px)',
   },
 } as const

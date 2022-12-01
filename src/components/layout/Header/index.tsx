@@ -1,6 +1,7 @@
 import { useKBar } from 'kbar'
 import { Command } from 'phosphor-react'
 import { useEffect, useState } from 'react'
+import { Menu } from '../Menu'
 import { HeaderContainer, Wrapper } from './styles'
 
 export const Header = () => {
@@ -20,6 +21,7 @@ export const Header = () => {
       <Wrapper>
         <strong>Isaac Santiago</strong>
 
+        <Menu />
         <button onClick={handleNavigation}>
           <Command size={24} color="white" />
         </button>
