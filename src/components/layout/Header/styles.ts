@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
   inset: 0 0 auto 0;
   z-index: 50;
   transition: all 0.1s;
-  background: ${(props) => props.theme.color['base-900']};
+  background-color: ${(props) => props.theme.color['base-900']};
 `
 
 export const Wrapper = styled.div`

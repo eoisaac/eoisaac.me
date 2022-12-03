@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const MenuContainer = styled.nav`
   position: absolute;
   inset: 100% 0 auto 0;
-  background-color: inherit;
+  background-color: ${(props) => props.theme.color['base-900']};
   overflow-x: auto;
 
   ul {

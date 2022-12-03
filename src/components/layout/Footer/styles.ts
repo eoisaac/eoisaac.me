@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
-  width: 100%;
-  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: ${(props) => props.theme.spacing.md};
 `
