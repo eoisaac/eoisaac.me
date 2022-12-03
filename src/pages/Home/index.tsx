@@ -1,68 +1,29 @@
-import { HomePageContainer } from './styles'
+import { useKBar } from 'kbar'
+import { Button } from '../../components/Button'
+import { HeadingContainer, HomePageContainer } from './styles'
 
 export const Home = () => {
+  const { query } = useKBar()
+
+  const handleNavigation = () => {
+    query.toggle()
+  }
+
+  // const isMac = /(Mac)/i.test(navigator.userAgent)
+  // const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent)
+
   return (
-    <HomePageContainer heading="Home">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident error
-        nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
-      <p>
-        Último ipsum dolor sit amet consectetur adipisicing elit. Provident
-        error nisi veniam possimus quasi doloremque nesciunt numquam! Corrupti
-        perspiciatis, suscipit fugiat rem eveniet iste, officiis atque, ipsum
-        accusamus consectetur neque.
-      </p>
+    <HomePageContainer>
+      <HeadingContainer>
+        <h1>Isaac Santiago</h1>
+        <div>
+          <strong>Frontend Developer</strong>
+          <p>Information Systems student. Programming and technology lover.</p>
+        </div>
+        <Button onClick={handleNavigation}>
+          Press <kbd>ctrl</kbd> <kbd>K</kbd> to start
+        </Button>
+      </HeadingContainer>
     </HomePageContainer>
   )
 }

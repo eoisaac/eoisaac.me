@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <HeaderContainer isScrolling={isSrolling}>
       <Wrapper>
-        <strong>Isaac Santiago</strong>
+        <strong>is</strong>
 
         <Menu />
         <button onClick={handleNavigation}>

@@ -2,12 +2,13 @@ import { createGlobalStyle } from 'styled-components'
 import { normalize } from './normalize'
 
 export const GlobalStyle = createGlobalStyle`
-  ${normalize}
+  ${normalize};
+
 
   body {
     font-size: 1rem;
     line-height: 150%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: ${(props) => props.theme.family.sans};
     font-weight: 400;
     color: ${(props) => props.theme.color['base-400']};
     -webkit-font-smoothing: antialiased;
@@ -15,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${(props) => props.theme.color['base-900']};
   }
 
-  :focus {
+  *:focus {
     outline: transparent;
     border-radius: ${(props) => props.theme.rounded.base};
     overflow: hidden;
@@ -28,8 +29,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
+    width: 2px;
+    height: 2px;
   }
   
   ::-webkit-scrollbar-thumb {

@@ -3,7 +3,7 @@ import { Root } from '../root'
 export const DarkTheme = {
   ...Root,
   color: {
-    'base-900': '#0f172a',
+    'base-900': '#08070B',
     'base-800': '#1e293b',
     'base-700': '#334155',
     'base-600': '#475569',

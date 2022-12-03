@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
 
 export const Wrapper = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
   align-items: center;

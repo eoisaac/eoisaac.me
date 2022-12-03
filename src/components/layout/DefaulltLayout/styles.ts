@@ -16,7 +16,8 @@ export const ScreenContainer = styled.div`
 export const PageContainer = styled.main`
   flex: 1;
   min-height: 0;
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1024px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;

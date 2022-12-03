@@ -15,6 +15,10 @@ export const Root = {
     medium: 500,
     bold: 700,
   },
+  family: {
+    sans: 'Ubuntu, sans-serif',
+    mono: 'Fira Code, monospace',
+  },
   text: {
     xs: '0.75rem',
     sm: '0.875rem',

@@ -3,15 +3,17 @@ import { BasePageContainer, PageContent, PageHeader } from './styles'
 
 interface BasePageProps {
   children: ReactNode
-  heading: string
+  heading?: string
 }
 
 export const BasePage = ({ children, heading }: BasePageProps) => {
   return (
     <BasePageContainer>
-      <PageHeader>
-        <h1>{heading}</h1>
-      </PageHeader>
+      {heading && (
+        <PageHeader>
+          <h1>{heading}</h1>
+        </PageHeader>
+      )}
       <PageContent>{children}</PageContent>
     </BasePageContainer>
   )
