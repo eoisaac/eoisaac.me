@@ -27,6 +27,7 @@ export const Root = {
     xl: '1.25rem',
     xxl: '1.875rem',
   },
+  duration: '0.2s',
   rounded: {
     base: '8px',
     full: '9999px',

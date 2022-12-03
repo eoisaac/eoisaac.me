@@ -1,6 +1,7 @@
 import { useKBar } from 'kbar'
 import { Command } from 'phosphor-react'
 import { useEffect, useState } from 'react'
+import { Button } from '../../Button'
 import { Menu } from '../Menu'
 import { HeaderContainer, Wrapper } from './styles'
 
@@ -19,12 +20,12 @@ export const Header = () => {
   return (
     <HeaderContainer isScrolling={isSrolling}>
       <Wrapper>
-        <strong>is</strong>
+        <Button>is</Button>
 
         <Menu />
-        <button onClick={handleNavigation}>
-          <Command size={24} color="white" />
-        </button>
+        <Button onClick={handleNavigation}>
+          <Command color="white" />
+        </Button>
       </Wrapper>
     </HeaderContainer>
   )

@@ -1,4 +1,5 @@
 import { CaretUp } from 'phosphor-react'
+import { Button } from '../../Button'
 import { Social } from '../../Social'
 import { FooterContainer } from './styles'
 
@@ -10,9 +11,9 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <Social />
-      <button onClick={handleNavigateToTop}>
+      <Button onClick={handleNavigateToTop}>
         <CaretUp />
-      </button>
+      </Button>
     </FooterContainer>
   )
 }

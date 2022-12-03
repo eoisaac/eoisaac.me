@@ -11,7 +11,7 @@ export const BasePageContainer = styled.section`
 export const PageHeader = styled.div`
   h1 {
     font-size: ${(props) => props.theme.text.xxl};
-    font-weight: ${(props) => props.theme.font.medium};
+    font-weight: ${(props) => props.theme.font.bold};
     color: ${(props) => props.theme.color['base-200']};
   }
 `

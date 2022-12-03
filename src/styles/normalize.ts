@@ -130,6 +130,9 @@ export const normalize = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  svg {
+    display: block;
+  }
   * {
     box-sizing: border-box;
     margin: 0;
@@ -139,6 +142,6 @@ export const normalize = css`
     border: none;
     outline: none;
     background: none;
-    transition: all 50ms;
+    transition: all 0.2s;
   }
 `

@@ -5,10 +5,10 @@ export const ScreenContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: calc(${(props) => props.theme.spacing.xxl} + 2rem);
+  padding-top: calc(${(props) => props.theme.spacing.xxl} + 3rem);
   overflow-y: auto;
 
-  @media ${(props) => props.theme.screen.xs} {
+  @media ${(props) => props.theme.screen.sm} {
     padding-top: ${(props) => props.theme.spacing.xxl};
   }
 `
