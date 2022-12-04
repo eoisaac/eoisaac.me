@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --base-50: 15 23 42;
+    --base-100: 30 41 59;
+    --base-200: 51 65 85;
+    --base-300: 71 85 105;
+    --base-400: 100 116 139;
+    --base-500: 148 163 184;
+    --base-600: 203 213 225;
+    --base-700: 226 232 240;
+    --base-800: 241 245 249;
+    --base-900: 248 250 252;
+
+    --main-900: 49 46 129;
+    --main-800: 55 48 163;
+    --main-700: 67 56 202;
+    --main-600: 79 70 229;
+    --main-500: 99 102 241;
+    --main-400: 129 140 248;
+    --main-300: 165 180 252;
+    --main-200: 199 210 254;
+    --main-100: 224 231 255;
+    --main-50: 238 242 255;
+
+    --success-700: 21 128 61;
+    --success-500: 16 185 129;
+    --success-300: 110 231 183;
+
+    --warning-600: 217 119 6;
+    --warning-400: 251 191 36;
+    --warning-300: 253 230 138;
+
+    --danger-700: 190 18 60;
+    --danger-500: 244 63 94;
+    --danger-300: 253 164 175;
+
+    --transparent: transparent;
+  }
+
+  .dark:root {
+    --base-900: 15 23 42;
+    --base-800: 30 41 59;
+    --base-700: 51 65 85;
+    --base-600: 71 85 105;
+    --base-500: 100 116 139;
+    --base-400: 148 163 184;
+    --base-300: 203 213 225;
+    --base-200: 226 232 240;
+    --base-100: 241 245 249;
+    --base-50: 248 250 252;
+  }
+}
+
+::selection {
+  @apply bg-m-600 text-b-100;
+}
+
+:focus {
+  @apply rounded-md shadow-inner shadow-m-500;
+}
+
+::-webkit-scrollbar {
+  @apply h-[2px] w-[2px] bg-b-700;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-transparent;
+}
+
+body {
+  @apply bg-b-900 font-sans text-base font-normal antialiased;
+}
