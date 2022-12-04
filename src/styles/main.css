@@ -60,17 +60,22 @@
 }
 
 :focus {
-  @apply rounded-md shadow-inner shadow-m-500;
+  @apply overflow-hidden rounded-md outline-none;
+  box-shadow: 0 0 0 2px theme(colors.m-600);
 }
 
 ::-webkit-scrollbar {
-  @apply h-[2px] w-[2px] bg-b-700;
+  @apply h-[1px] w-[1px] bg-transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-transparent;
+  @apply rounded-lg bg-b-700;
 }
 
 body {
-  @apply bg-b-900 font-sans text-base font-normal antialiased;
+  @apply bg-b-900 font-sans text-base font-normal text-b-400 antialiased;
+}
+
+ul li a.active {
+  @apply text-b-100 after:opacity-100;
 }
