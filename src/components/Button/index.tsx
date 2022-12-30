@@ -1,10 +1,24 @@
-import { HTMLAttributes, ReactNode } from 'react'
+import { HTMLAttributes } from 'react'
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  children: ReactNode
+  label: string
+  srLabel?: boolean
+  icon?: JSX.Element
+  iconLeft?: boolean
+  variant?: 'primary'
+  type?: 'button' | 'submit' | 'reset'
 }
 
-export const Button = ({ children, className, ...rest }: ButtonProps) => {
+export const Button = ({
+  label,
+  srLabel,
+  icon,
+  iconLeft = false,
+  variant = 'primary',
+  type = 'button',
+  className,
+  ...rest
+}: ButtonProps) => {
   return (
     <button
       {...rest}
@@ -12,7 +26,8 @@ export const Button = ({ children, className, ...rest }: ButtonProps) => {
     bg-transparent p-1 text-base text-b-300 hover:bg-b-100/10 hover:text-b-100
     ${className}`}
     >
-      <span>{children}</span>
+      {icon && <span>{icon}</span>}
+      <span className={`${srLabel ? 'sr-only' : ''}`}>{label}</span>
     </button>
   )
 }

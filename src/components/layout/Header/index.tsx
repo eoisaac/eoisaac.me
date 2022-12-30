@@ -1,28 +1,24 @@
-import { List, X } from 'phosphor-react'
-import { useState } from 'react'
+import { List } from 'phosphor-react'
+import { useEffect, useState } from 'react'
 import { Button } from '../../Button'
-import { Menu } from '../Menu'
 
 export const Header = () => {
-  const [menuIsVisible, setMenuIsVisible] = useState(false)
+  const [isScrolling, setIsScrolling] = useState(false)
 
-  const handleMenuVisibility = () => {
-    setMenuIsVisible((prevState) => !prevState)
-  }
+  useEffect(() => {
+    window.onscroll = () => setIsScrolling(window.pageYOffset > 0)
+  }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 w-full">
-      <div className="mx-auto flex max-w-5xl items-center justify-between bg-b-900 p-4">
-        <Button>iS</Button>
-
-        <Menu isVisible={menuIsVisible} />
-
-        <Button
-          onClick={handleMenuVisibility}
-          className="relative z-30 sm:hidden"
-        >
-          {menuIsVisible ? <X /> : <List />}
-        </Button>
+    <header
+      className={`fixed top-0 z-20 flex w-full items-center justify-between
+      ${
+        isScrolling ? 'border-b border-b-700 shadow-md' : 'border-none'
+      } bg-b-900 bg-opacity-30 backdrop-blur-lg backdrop-saturate-150
+      backdrop-filter`}
+    >
+      <div className="mx-auto w-full max-w-5xl p-4">
+        <Button label="Test" srLabel icon={<List />} />
       </div>
     </header>
   )
