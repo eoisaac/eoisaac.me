@@ -44,8 +44,6 @@ module.exports = {
         'd-700': 'rgb(var(--danger-700) / <alpha-value>)',
         'd-500': 'rgb(var(--danger-500) / <alpha-value>)',
         'd-300': 'rgb(var(--danger-300) / <alpha-value>)',
-
-        transparent: 'var(--transparent)',
       },
     },
   },

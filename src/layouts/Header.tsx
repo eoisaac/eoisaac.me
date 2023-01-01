@@ -48,11 +48,11 @@ export const Header = () => {
       <nav
         className={`bg-dark fixed right-0 z-20 flex h-full w-full transform
         flex-col justify-between p-4 pb-16 duration-500 ease-in-out sm:hidden
-        ${displayMenu ? 'translate-x-0' : ' -translate-x-full'}
+        ${displayMenu ? 'translate-x-0' : '-translate-x-full'}
         firefox:bg-opacity-100 bg-opacity-30 pt-14 backdrop-blur-lg
         backdrop-saturate-150 backdrop-filter`}
       >
-        <ul className="flex flex-col gap-8">
+        <ul className="flex flex-col gap-8 py-4">
           {navLinks.map(({ label, href }) => (
             <MenuLink
               key={label}
