@@ -10,12 +10,12 @@ interface UseThemeProps {
 
 const getTheme = () => {
   const storedTheme = localStorage.getItem('theme') as Themes
-  const preferedIsDark = window.matchMedia(
+  const preferredIsDark = window.matchMedia(
     '(prefers-color-scheme: dark)',
   ).matches
 
   if (storedTheme) return storedTheme
-  if (preferedIsDark) return 'dark'
+  if (preferredIsDark) return 'dark'
 
   return 'light'
 }
@@ -25,6 +25,10 @@ export const useTheme = (): UseThemeProps => {
   const isDark = theme === 'dark'
 
   useEffect(() => {
+    const root = window.document.documentElement
+    const isDark = theme === 'dark'
+
+    isDark ? root.classList.add('dark') : root.classList.remove('dark')
     localStorage.setItem('theme', theme)
   }, [theme])
 

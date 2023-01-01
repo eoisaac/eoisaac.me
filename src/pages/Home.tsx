@@ -10,13 +10,14 @@ export const Home = () => {
         <div>
           <h1
             className="md:leading-14 text-3xl font-extrabold leading-9
-          tracking-tight text-b-100 shadow-sm sm:text-4xl sm:leading-10 md:text-5xl"
+          tracking-tight text-b-100 drop-shadow-sm sm:text-4xl
+          sm:leading-10 md:text-5xl"
           >
             Isaac Santiago
           </h1>
           <strong
             className="bg-gradient-to-r from-cyan-400 to-emerald-500
-        bg-clip-text text-2xl text-transparent shadow-sm sm:text-3xl"
+        bg-clip-text text-2xl text-transparent drop-shadow-sm sm:text-3xl"
           >
             Fullstack developer
           </strong>
@@ -27,7 +28,7 @@ export const Home = () => {
           <p>I&apos;m currently learning React and Typescript.</p>
         </div>
 
-        <Link to="/contact">
+        <Link to="/contact" className="self-start focus:shadow-none">
           <Button label="Get in touch" icon={<PaperPlaneRight />} />
         </Link>
       </div>
