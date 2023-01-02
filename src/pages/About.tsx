@@ -1,10 +1,10 @@
 import { JobNode } from '../components/JobNode'
+import { SocialList } from '../components/SocialList'
+import { jobs } from '../data/jobs'
 import { BasePage } from '../layouts/BasePage'
 import { BaseSection } from '../layouts/BaseSection'
 
 export const About = () => {
-  const jobs = [{}, {}]
-
   return (
     <BasePage heading="About me.">
       <BaseSection heading="A little about myself" srHeading>
@@ -12,17 +12,18 @@ export const About = () => {
           className="flex flex-col items-center gap-4 sm:flex-row 
         sm:items-start"
         >
-          <figure>
-            <img
-              src="./assets/images/me.jpg"
-              alt="Isaac wearing a blue hoodie picture."
-              loading="lazy"
-              className="rounded-md shadow-md"
-            />
-            <figcaption className="ml-1 mt-1 text-sm text-b-500">
-              Hi! It&apos;s me!
-            </figcaption>
-          </figure>
+          <div>
+            <figure>
+              <img
+                src="./assets/images/me.jpg"
+                alt="Isaac wearing a blue hoodie picture."
+                loading="lazy"
+                className="rounded-md shadow-md"
+              />
+              <figcaption className="sr-only">Isaac Santiago.</figcaption>
+            </figure>
+            <SocialList />
+          </div>
           <div className="flex flex-col gap-2">
             <p>
               Meu nome é Isaac Santiago Gomes Pereira, tenho 21 anos e nasciem
@@ -57,10 +58,10 @@ export const About = () => {
         </p>
       </BaseSection>
       <BaseSection heading="Where I've Worked">
-        <ol className="mt-1 border-l-[1px] border-b-600">
-          {jobs.map((job, index) => (
-            <JobNode key={index} />
-          ))}
+        <ol className="ml-4 flex list-disc flex-col gap-4">
+          {jobs.map((job) => {
+            return <JobNode key={`${job.role}-${job.company.name}`} job={job} />
+          })}
         </ol>
       </BaseSection>
     </BasePage>

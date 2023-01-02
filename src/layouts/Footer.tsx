@@ -1,4 +1,5 @@
 import { Moon, Sun } from 'phosphor-react'
+import { CustomLink } from '../components/CustomLink'
 import { Toggle } from '../components/Toggle'
 import { useTheme } from '../hooks/useTheme'
 
@@ -14,14 +15,11 @@ export const Footer = () => {
     >
       <div className="flex flex-wrap items-center gap-1 text-sm">
         <div>Copyright &copy; {currentYear} </div>
-        <a
+        <CustomLink
           href="https://github.com/eoisaac"
-          target="_blank"
-          rel="noreferrer"
-          className="text-b-100 hover:text-b-50"
-        >
-          eoisaac - Isaac Santiago
-        </a>
+          label="eoisaac - Isaac Santiago"
+          icon={false}
+        />
       </div>
       <Toggle
         label="Toggle theme"

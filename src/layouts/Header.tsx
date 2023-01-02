@@ -1,8 +1,24 @@
 import { List, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { Button } from '../components/Button'
-import { MenuLink } from '../components/MenuLink'
 import { navLinks } from '../routes/AppRoutes'
+
+interface MenuLinkProps {
+  label: string
+  href: string
+  onClick?: () => void
+}
+
+const MenuLink = ({ label, href, onClick }: MenuLinkProps) => {
+  return (
+    <li onClick={onClick}>
+      <NavLink to={href} className="hover -m-1 bg-transparent p-1 font-medium">
+        {label}
+      </NavLink>
+    </li>
+  )
+}
 
 export const Header = () => {
   const [displayMenu, setDisplayMenu] = useState(false)

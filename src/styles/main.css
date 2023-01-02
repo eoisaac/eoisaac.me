@@ -62,12 +62,12 @@
 }
 
 ::selection {
-  @apply bg-m-600 text-b-100;
+  @apply bg-cyan-600 text-b-100;
 }
 
 :focus {
   @apply overflow-hidden rounded-md border-none outline-none;
-  box-shadow: 0 0 0 2px theme(colors.m-600);
+  box-shadow: 0 0 0 2px theme(colors.cyan.400);
 }
 
 ::-webkit-scrollbar {
@@ -84,6 +84,10 @@ body {
 
 ul li a.active {
   @apply text-b-50 hover:text-b-50;
+}
+
+.hover {
+  @apply rounded-md transition-all duration-200 hover:bg-b-700/50 hover:text-b-300;
 }
 
 @layer base {
