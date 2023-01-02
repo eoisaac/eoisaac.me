@@ -14,7 +14,13 @@ export const JobNode = ({ job }: JobNodeProps) => {
       <h3 className="text-lg font-medium text-b-200 sm:text-xl">{role}</h3>
       <div>
         {link ? (
-          <CustomLink href={link} target="_blank" label={name} icon={false} />
+          <CustomLink
+            href={link}
+            type="external"
+            target="_blank"
+            label={name}
+            icon={false}
+          />
         ) : (
           <span>{name}</span>
         )}

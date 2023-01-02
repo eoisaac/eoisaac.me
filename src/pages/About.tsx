@@ -1,3 +1,4 @@
+import { CustomLink } from '../components/CustomLink'
 import { JobNode } from '../components/JobNode'
 import { SocialList } from '../components/SocialList'
 import { jobs } from '../data/jobs'
@@ -38,24 +39,20 @@ export const About = () => {
               queria seguir na carreira de programação.
             </p>
             <p>
-              Por acaso, procurando lives na Twitch, encontrei o canal doMarco
-              Brunoe comecei a segui-lo. Ele estava desenvolvendo uma plataforma
-              de cursos, a FiredLabs, que possui um curso básico sobre HTML e
-              CSS, no qual o projeto era desenvolver um site portfólio. Após
-              terminar esse curso, comecei a me interessar mais por desenvolver
-              sites, e, desde então, venho estudando JavaScript, HTML e CSS, e,
-              tenho como objetivo aprender React e Node futuramente.
+              Por acaso, procurando lives na Twitch, encontrei o
+              <CustomLink
+                label="canal do Marco Bruno"
+                href="https://www.twitch.tv/marcobrunodev"
+              />
+              e comecei a segui-lo. Ele estava desenvolvendo uma plataforma de
+              cursos, a FiredLabs, que possui um curso básico sobre HTML e CSS,
+              no qual o projeto era desenvolver um site portfólio. Após terminar
+              esse curso, comecei a me interessar mais por desenvolver sites, e,
+              desde então, venho estudando JavaScript, HTML e CSS, e, tenho como
+              objetivo aprender React e Node futuramente.
             </p>
           </div>
         </div>
-      </BaseSection>
-      <BaseSection heading="Technologies">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea
-          repellat accusantium praesentium beatae provident minima perferendis,
-          recusandae repudiandae laudantium earum maxime commodi nostrum
-          architecto eaque repellendus quidem voluptatibus harum.
-        </p>
       </BaseSection>
       <BaseSection heading="Where I've Worked">
         <ol className="ml-4 flex list-disc flex-col gap-4">

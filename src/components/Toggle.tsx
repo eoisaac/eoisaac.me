@@ -6,6 +6,7 @@ interface ToggleProps extends HTMLAttributes<HTMLInputElement> {
   leftIcon?: JSX.Element
   bodyIcon?: JSX.Element
   toggleIcon?: JSX.Element
+  checked?: boolean
 }
 
 export const Toggle = ({
@@ -13,6 +14,7 @@ export const Toggle = ({
   srLabel,
   bodyIcon,
   toggleIcon,
+  checked,
   ...rest
 }: ToggleProps) => {
   return (
@@ -21,7 +23,12 @@ export const Toggle = ({
         className="relative flex h-5 w-10 items-center rounded-full
       bg-b-500/30"
       >
-        <input type="checkbox" className="peer sr-only" {...rest} />
+        <input
+          type="checkbox"
+          className="peer sr-only"
+          {...rest}
+          checked={checked}
+        />
         <div
           className="absolute grid h-5 w-5 translate-x-full place-items-center
         text-b-500 transition-all duration-150 peer-checked:-translate-x-0"
