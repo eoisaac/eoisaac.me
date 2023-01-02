@@ -13,7 +13,7 @@ interface MenuLinkProps {
 const MenuLink = ({ label, href, onClick }: MenuLinkProps) => {
   return (
     <li onClick={onClick}>
-      <NavLink to={href} className="hover -m-1 bg-transparent p-1 font-medium">
+      <NavLink to={href} className="hover bg-transparent font-medium">
         {label}
       </NavLink>
     </li>
@@ -68,7 +68,7 @@ export const Header = () => {
         firefox:bg-opacity-100 bg-opacity-30 pt-14 backdrop-blur-lg
         backdrop-saturate-150 backdrop-filter`}
       >
-        <ul className="flex flex-col gap-8 py-4">
+        <ul className="flex flex-col gap-8 py-4 text-b-50">
           {navLinks.map(({ label, href }) => (
             <MenuLink
               key={label}

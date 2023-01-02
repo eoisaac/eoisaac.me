@@ -16,14 +16,12 @@ const SocialMedia = ({ name, href, icon }: SocialMediaProps) => {
     <li>
       <a
         href={href}
-        className="p-2"
+        className="hover block"
         title={`My ${name}`}
         target="_blank"
         rel="noreferrer"
       >
-        <div className="hover -m-1 bg-transparent p-1 text-2xl text-b-400">
-          {icon}
-        </div>
+        <div className="bg-transparent text-2xl">{icon}</div>
         <span className="sr-only">{`My ${name}`}</span>
       </a>
     </li>
@@ -32,14 +30,30 @@ const SocialMedia = ({ name, href, icon }: SocialMediaProps) => {
 
 export const SocialList = () => {
   const socialMedias = [
-    { name: 'GitHub', href: '', icon: <GithubLogo /> },
-    { name: 'LinkedIn', href: '', icon: <LinkedinLogo /> },
-    { name: 'Twitter', href: '', icon: <TwitterLogo /> },
-    { name: 'Instagram', href: '', icon: <InstagramLogo /> },
+    {
+      name: 'GitHub',
+      href: 'https://github.com/eoisaac',
+      icon: <GithubLogo />,
+    },
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/eoisaac',
+      icon: <LinkedinLogo />,
+    },
+    {
+      name: 'Twitter',
+      href: 'https://twitter.com/eoisaacc',
+      icon: <TwitterLogo />,
+    },
+    {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/eoisaacc',
+      icon: <InstagramLogo />,
+    },
   ]
 
   return (
-    <ul className="flex gap-3">
+    <ul className="flex items-center gap-3">
       {socialMedias.map(({ name, href, icon }) => {
         return <SocialMedia key={name} name={name} href={href} icon={icon} />
       })}

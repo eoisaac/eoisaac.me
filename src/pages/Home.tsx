@@ -16,8 +16,8 @@ export const Home = () => {
             Isaac Santiago
           </h1>
           <strong
-            className="bg-gradient-to-r from-cyan-400 to-emerald-500
-        bg-clip-text text-2xl text-transparent drop-shadow-sm sm:text-3xl"
+            className="bg-gradient-to-r from-m-400 to-emerald-500 bg-clip-text
+            text-2xl text-transparent drop-shadow-sm sm:text-3xl"
           >
             Fullstack developer
           </strong>
@@ -29,7 +29,10 @@ export const Home = () => {
         </div>
 
         <Link to="/contact" className="self-start focus:shadow-none">
-          <Button label="Get in touch" icon={<PaperPlaneRight />} />
+          <Button
+            label="Get in touch"
+            icon={<PaperPlaneRight weight="bold" />}
+          />
         </Link>
       </div>
     </BasePage>

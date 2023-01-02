@@ -11,7 +11,7 @@ export const JobNode = ({ job }: JobNodeProps) => {
 
   return (
     <li className="flex flex-col">
-      <h4 className="text-lg font-medium text-b-300 sm:text-xl">{role}</h4>
+      <h3 className="text-lg font-medium text-b-200 sm:text-xl">{role}</h3>
       <div>
         {link ? (
           <CustomLink href={link} target="_blank" label={name} icon={false} />

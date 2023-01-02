@@ -19,7 +19,7 @@ export const Toggle = ({
     <label className="flex cursor-pointer items-center gap-2">
       <div
         className="relative flex h-5 w-10 items-center rounded-full
-      bg-b-300/30"
+      bg-b-500/30"
       >
         <input type="checkbox" className="peer sr-only" {...rest} />
         <div
@@ -31,7 +31,7 @@ export const Toggle = ({
 
         <div
           className="absolute z-10 grid h-full w-5 place-items-center
-          rounded-full bg-b-100 transition-all duration-150
+          rounded-full bg-b-200 transition-all duration-150
           peer-checked:translate-x-full"
         >
           <span className="text-b-dark">{toggleIcon}</span>

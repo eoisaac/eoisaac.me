@@ -17,16 +17,16 @@
     --base-900: 250 250 250;
     --base-dark: 255 255 255;
 
-    --main-900: 49 46 129;
-    --main-800: 55 48 163;
-    --main-700: 67 56 202;
-    --main-600: 79 70 229;
-    --main-500: 99 102 241;
-    --main-400: 129 140 248;
-    --main-300: 165 180 252;
-    --main-200: 199 210 254;
-    --main-100: 224 231 255;
-    --main-50: 238 242 255;
+    --main-900: 22 78 99;
+    --main-800: 21 94 117;
+    --main-700: 14 116 144;
+    --main-600: 8 145 178;
+    --main-500: 6 182 212;
+    --main-400: 34 211 238;
+    --main-300: 103 232 249;
+    --main-200: 165 243 252;
+    --main-100: 207 250 254;
+    --main-50: 236 254 255;
 
     --success-700: 21 128 61;
     --success-500: 16 185 129;
@@ -62,12 +62,12 @@
 }
 
 ::selection {
-  @apply bg-cyan-600 text-b-100;
+  @apply bg-m-600 text-b-100;
 }
 
 :focus {
   @apply overflow-hidden rounded-md border-none outline-none;
-  box-shadow: 0 0 0 2px theme(colors.cyan.400);
+  box-shadow: 0 0 0 2px theme(colors.m-500);
 }
 
 ::-webkit-scrollbar {
@@ -87,7 +87,7 @@ ul li a.active {
 }
 
 .hover {
-  @apply rounded-md transition-all duration-200 hover:bg-b-700/50 hover:text-b-300;
+  @apply -mx-1 rounded-md p-1 transition-all duration-200 hover:bg-b-500/30 hover:text-b-200;
 }
 
 @layer base {

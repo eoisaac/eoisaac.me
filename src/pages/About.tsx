@@ -6,14 +6,14 @@ import { BaseSection } from '../layouts/BaseSection'
 
 export const About = () => {
   return (
-    <BasePage heading="About me.">
+    <BasePage heading="About me">
       <BaseSection heading="A little about myself" srHeading>
         <div
           className="flex flex-col items-center gap-4 sm:flex-row 
         sm:items-start"
         >
           <div>
-            <figure>
+            <figure className="mb-4">
               <img
                 src="./assets/images/me.jpg"
                 alt="Isaac wearing a blue hoodie picture."
