@@ -7,11 +7,10 @@ import { BaseSection } from '../layouts/BaseSection'
 import { getRepositories } from '../services/axios/requests/githubAPI'
 
 export const Projects = () => {
-  const {
-    data: repositories,
-    isFetching,
-    isError,
-  } = useQuery<Repository[]>('REPOSITORIES', getRepositories)
+  const { data: repositories, isFetching } = useQuery<Repository[]>(
+    'REPOSITORIES',
+    getRepositories,
+  )
 
   return (
     <BasePage heading="My projects">

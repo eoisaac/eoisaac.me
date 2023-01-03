@@ -6,16 +6,16 @@ interface RepositoryCardProps {
 
 export const RepositoryCard = ({ data }: RepositoryCardProps) => {
   const {
-    id,
+    // id,
     name,
-    html_url,
-    description,
-    homepage,
-    stargazers_count,
-    language,
-    forks_count,
-    topics,
-    forks,
+    // html_url,
+    // description,
+    // homepage,
+    // stargazers_count,
+    // language,
+    // forks_count,
+    // topics,
+    // forks,
   } = data
 
   return <li>{name.replace(/_/g, ' ')}</li>
