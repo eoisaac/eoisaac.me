@@ -48,10 +48,10 @@ export const CustomLink = ({
   }
 
   return (
-    <>
+    <span>
       &nbsp;
       {types[type]}
       &nbsp;
-    </>
+    </span>
   )
 }
