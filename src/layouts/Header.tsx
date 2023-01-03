@@ -2,7 +2,6 @@ import { List, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button } from '../components/Button'
-import { navLinks } from '../routes/AppRoutes'
 
 interface MenuLinkProps {
   label: string
@@ -32,6 +31,14 @@ export const Header = () => {
     setDisplayMenu((prevState) => !prevState)
     document.body.style.overflow = displayMenu ? 'auto' : 'hidden'
   }
+
+  const navLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Articles', href: '/articles' },
+    { label: 'Contact', href: '/contact' },
+  ]
 
   return (
     <>
