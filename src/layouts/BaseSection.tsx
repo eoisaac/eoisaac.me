@@ -26,7 +26,7 @@ export const BaseSection = ({
           {heading}
         </h2>
       )}
-      <div>{children}</div>
+      <div className="flex flex-col gap-4">{children}</div>
     </section>
   )
 }
