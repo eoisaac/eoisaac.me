@@ -20,8 +20,9 @@ export const Projects = () => {
           Here you can find my {repositories?.length} different websites, apps,
           and libraries that I built. If you prefer, you can access my
           <CustomLink
-            label="GitHub repositories"
             href="https://github.com/eoisaac?tab=repositories"
+            type="external"
+            label="GitHub repositories"
           />
           .
         </p>

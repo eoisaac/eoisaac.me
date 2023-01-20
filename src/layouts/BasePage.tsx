@@ -8,7 +8,9 @@ interface BasePageProps {
 
 export const BasePage = ({ heading, children, className }: BasePageProps) => {
   return (
-    <section className={`flex flex-1 flex-col gap-4 pt-4 ${className}`}>
+    <section
+      className={`flex flex-1 flex-col gap-4 pt-4 ${className && className}`}
+    >
       {heading && (
         <h1
           className="bg-gradient-to-r from-m-400 to-emerald-500
@@ -18,7 +20,7 @@ export const BasePage = ({ heading, children, className }: BasePageProps) => {
           {heading}.
         </h1>
       )}
-      <div>{children}</div>
+      <>{children}</>
     </section>
   )
 }

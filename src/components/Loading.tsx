@@ -1,7 +1,7 @@
 export const Loading = () => {
   return (
     <div
-      className="relative z-30 grid flex-1 animate-spin place-items-center 
+      className="relative z-30 grid h-full flex-1 animate-spin place-items-center 
     self-center"
     >
       <div
