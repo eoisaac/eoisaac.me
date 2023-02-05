@@ -5,8 +5,8 @@ import { BasePage } from '../layouts/BasePage'
 
 export const Home = () => {
   return (
-    <BasePage className="justify-center">
-      <div className="flex flex-col gap-4">
+    <BasePage>
+      <div className="my-auto flex flex-col gap-4">
         <div>
           <h1
             className="md:leading-14 text-3xl font-extrabold leading-9

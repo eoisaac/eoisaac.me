@@ -3,14 +3,11 @@ import { ReactNode } from 'react'
 interface BasePageProps {
   heading?: string
   children: ReactNode
-  className?: string
 }
 
-export const BasePage = ({ heading, children, className }: BasePageProps) => {
+export const BasePage = ({ heading, children }: BasePageProps) => {
   return (
-    <section
-      className={`flex flex-1 flex-col gap-4 pt-4 ${className && className}`}
-    >
+    <section className="flex flex-1 flex-col gap-4 pt-4">
       {heading && (
         <h1
           className="bg-gradient-to-r from-m-400 to-emerald-500
