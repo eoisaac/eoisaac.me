@@ -10,7 +10,7 @@ export const About = () => {
     <BasePage heading="About me">
       <BaseSection heading="A little about myself" srHeading>
         <div
-          className="flex flex-col items-center gap-4 sm:flex-row 
+          className="flex flex-col items-center gap-4 sm:flex-row
         sm:items-start"
         >
           <div>
@@ -19,7 +19,8 @@ export const About = () => {
                 src="./assets/images/me.jpg"
                 alt="Isaac wearing a blue hoodie picture."
                 loading="lazy"
-                className="rounded-md shadow-md"
+                className="rounded-md shadow-md grayscale transition-all
+                duration-200 hover:grayscale-0"
               />
               <figcaption className="sr-only">Isaac Santiago.</figcaption>
             </figure>
