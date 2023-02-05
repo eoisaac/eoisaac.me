@@ -12,7 +12,7 @@ export const RepositoryCard = ({ data }: RepositoryCardProps) => {
   return (
     <li>
       <article
-        className="flex h-full flex-col gap-4 rounded-md border-2 border-b-700 
+        className="flex h-full flex-col gap-4 rounded-md border-2 border-b-700
       p-4"
       >
         <header className="flex items-center justify-between">
