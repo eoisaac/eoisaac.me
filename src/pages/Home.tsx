@@ -1,9 +1,12 @@
 import { PaperPlaneRight } from 'phosphor-react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { BasePage } from '../layouts/BasePage'
 
 export const Home = () => {
+  const { t } = useTranslation()
+
   return (
     <BasePage>
       <div className="my-auto flex flex-col gap-4">
@@ -19,7 +22,7 @@ export const Home = () => {
             className="bg-gradient-to-r from-m-400 to-emerald-500 bg-clip-text
             text-2xl text-transparent drop-shadow-sm sm:text-3xl"
           >
-            Fullstack developer
+            {t('role')}
           </strong>
         </div>
 

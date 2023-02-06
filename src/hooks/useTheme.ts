@@ -15,9 +15,7 @@ const getTheme = () => {
   ).matches
 
   if (storedTheme) return storedTheme
-  if (preferredIsDark) return 'dark'
-
-  return 'light'
+  return preferredIsDark ? 'dark' : 'light'
 }
 
 export const useTheme = (): UseThemeProps => {
