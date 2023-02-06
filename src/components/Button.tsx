@@ -28,7 +28,7 @@ export const Button = ({
     <button
       {...rest}
       className={`hover text-title hover:text-accent -m-1 inline-flex w-max
-      items-center gap-2 whitespace-nowrap rounded-lg bg-transparent 
+      items-center gap-2 whitespace-nowrap rounded-lg bg-transparent
       p-1 text-b-100 ${className} ${
         iconLeft ? 'flex-row' : 'flex-row-reverse'
       } ${variants[variant]}`}

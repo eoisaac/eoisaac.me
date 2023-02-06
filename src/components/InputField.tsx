@@ -32,13 +32,13 @@ export const InputField = ({
         {label}
       </span>
       <div
-        className="flex flex-1 items-center gap-2
-        overflow-hidden rounded-md border-2 border-b-700 bg-transparent
-        shadow-sm group-focus-within:border-m-500"
+        className="flex flex-1 items-center gap-2 overflow-hidden rounded-md
+        border-2 border-b-700 bg-transparent shadow-sm
+        group-focus-within:border-m-500"
       >
         {hasIcon && (
           <div
-            className="text-lg text-slate-300 
+            className="text-lg text-slate-300
           group-focus-within:text-violet-500"
           >
             {icon}

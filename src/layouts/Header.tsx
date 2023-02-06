@@ -46,7 +46,7 @@ export const Header = () => {
         className={`fixed top-0 z-30 flex w-full items-center justify-between
         border-b ${isScrolling ? 'border-b-600' : 'border-b-transparent'}
         bg-dark firefox:bg-opacity-100 bg-opacity-30 backdrop-blur-lg
-        backdrop-saturate-150 backdrop-filter `}
+        backdrop-saturate-150 backdrop-filter`}
       >
         <nav
           className="mx-auto flex w-full max-w-2xl items-center justify-between

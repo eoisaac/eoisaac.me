@@ -1,6 +1,7 @@
-import { Moon, Sun } from 'phosphor-react'
+import { Gear, Moon, Sun, Translate } from 'phosphor-react'
+import { Button } from '../components/Button'
 import { CustomLink } from '../components/CustomLink'
-import { Toggle } from '../components/Toggle'
+import { Popover } from '../components/Popover'
 import { useTheme } from '../hooks/useTheme'
 
 export const Footer = () => {
@@ -21,13 +22,21 @@ export const Footer = () => {
           icon={false}
         />
       </div>
-      <Toggle
-        label="Toggle theme"
-        srLabel
-        bodyIcon={isDark ? <Sun /> : <Moon />}
-        onChange={toggleTheme}
-        checked={isDark}
-      />
+      <Popover label="Settings" icon={<Gear />}>
+        <ul className="-mb-1 flex flex-col gap-2">
+          <li>
+            <Button
+              label="Toggle theme"
+              iconLeft
+              icon={isDark ? <Sun /> : <Moon />}
+              onClick={toggleTheme}
+            />
+          </li>
+          <li>
+            <Button label="Toggle language" iconLeft icon={<Translate />} />
+          </li>
+        </ul>
+      </Popover>
     </footer>
   )
 }

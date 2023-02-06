@@ -33,12 +33,14 @@ export const Contact = () => {
     message,
   }: ContactFormFormData) => {
     const formattedMessage = `
+      Contact form:
       *At:* ${Date.now()}
       *Name:* ${name}
       *Email:* ${email}
       *Message:* ${message}
     `
     sendMessage(formattedMessage)
+
     reset()
   }
 
@@ -49,10 +51,10 @@ export const Contact = () => {
           Quer me dizer &quot;Oi!&quot;? Tem algo que gostaria de perguntar?
           Algum novo projeto ou oportunidade?
         </p>
-        <div className="my-auto mr-auto">
+        <div className="my-auto">
           <form
             onSubmit={handleSubmit(handleContactSubmit)}
-            className="flex flex-col items-center gap-2"
+            className="flex flex-col items-center gap-2 sm:max-w-xs"
           >
             <InputField
               label="Name"
