@@ -5,6 +5,7 @@ type Languages = 'enUS' | 'ptBR'
 
 interface UseLanguageProps {
   language: Languages
+  isEnglish: boolean
   toggleLanguage: () => void
 }
 
@@ -19,6 +20,8 @@ const getLanguage = () => {
 
 export const useLanguage = (): UseLanguageProps => {
   const [language, setLanguage] = useState(getLanguage)
+
+  const isEnglish = language === 'enUS'
 
   const {
     i18n: { changeLanguage },
@@ -35,6 +38,7 @@ export const useLanguage = (): UseLanguageProps => {
 
   return {
     language,
+    isEnglish,
     toggleLanguage,
   }
 }

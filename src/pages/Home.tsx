@@ -27,13 +27,13 @@ export const Home = () => {
         </div>
 
         <div>
-          <p>Programming and technology lover. I like coffee and JavaScript.</p>
-          <p>I&apos;m currently learning React and Typescript.</p>
+          <p>{t('p1_description')}</p>
+          <p>{t('p2_description')}</p>
         </div>
 
         <Link to="/contact" className="self-start focus:shadow-none">
           <Button
-            label="Get in touch"
+            label={t('contact_button')}
             icon={<PaperPlaneRight weight="bold" />}
           />
         </Link>

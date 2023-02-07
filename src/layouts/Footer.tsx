@@ -1,4 +1,5 @@
 import { Gear, Moon, Sun, Translate } from 'phosphor-react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '../components/Button'
 import { CustomLink } from '../components/CustomLink'
 import { Popover } from '../components/Popover'
@@ -6,8 +7,10 @@ import { useLanguage } from '../hooks/useLanguage'
 import { useTheme } from '../hooks/useTheme'
 
 export const Footer = () => {
-  const { toggleLanguage } = useLanguage()
+  const { isEnglish, toggleLanguage } = useLanguage()
   const { isDark, toggleTheme } = useTheme()
+
+  const { t } = useTranslation()
 
   const currentYear = new Date().getFullYear()
 
@@ -32,7 +35,7 @@ export const Footer = () => {
         <ul className="-mb-1 flex flex-col gap-2">
           <li>
             <Button
-              label="Toggle theme"
+              label={isDark ? t('light_theme') : t('dark_theme')}
               icon={isDark ? <Sun /> : <Moon />}
               iconLeft
               onClick={toggleTheme}
@@ -40,7 +43,7 @@ export const Footer = () => {
           </li>
           <li>
             <Button
-              label="Toggle language"
+              label={isEnglish ? t('ptBR') : t('enUS')}
               icon={<Translate />}
               iconLeft
               onClick={handleToggleLanguage}

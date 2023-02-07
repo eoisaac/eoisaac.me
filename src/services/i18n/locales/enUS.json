@@ -1,6 +1,12 @@
 {
     "translation": {
         "role": "Fullstack developer",
-        "description": ""
+        "p1_description": "Programming and technology lover. I like coffee and JavaScript.",
+        "p2_description": "I'm currently learning React and Typescript.",
+        "contact_button": "Get in touch",
+        "ptBR": "Portuguese [BR]",
+        "enUS": "English [US]",
+        "light_theme":"Light theme",
+        "dark_theme": "Dark theme"
     }
 }

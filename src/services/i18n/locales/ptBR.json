@@ -1,6 +1,12 @@
 {
     "translation": {
         "role": "Desenvolvedor Fullstack",
-        "description": ""
+        "p1_description": "Apaixonado por programação e tecnologia. Gosto de café e JavaScript",
+        "p2_description": "Atualmente estudo React e Typescript",
+        "contact_button": "Entrar em contato",
+        "ptBR": "Português [BR]",
+        "enUS": "Inglês [US]",
+        "light_theme":"Tema claro",
+        "dark_theme": "Tema escuro"
     }
 }
