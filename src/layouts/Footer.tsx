@@ -1,21 +1,18 @@
 import { Gear, Moon, Sun, Translate } from 'phosphor-react'
-import { useTranslation } from 'react-i18next'
 import { Button } from '../components/Button'
 import { CustomLink } from '../components/CustomLink'
 import { Popover } from '../components/Popover'
+import { useLanguage } from '../hooks/useLanguage'
 import { useTheme } from '../hooks/useTheme'
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear()
-
-  const {
-    i18n: { language, changeLanguage },
-  } = useTranslation()
+  const { toggleLanguage } = useLanguage()
   const { isDark, toggleTheme } = useTheme()
 
+  const currentYear = new Date().getFullYear()
+
   const handleToggleLanguage = () => {
-    const currentLanguage = language === 'pt' ? 'en' : 'pt'
-    changeLanguage(currentLanguage)
+    toggleLanguage()
   }
 
   return (

@@ -6,10 +6,10 @@ import ptBR from './locales/ptBR.json'
 
 export const test = i18n.use(initReactI18next).init({
   resources: {
-    en: enUS,
-    pt: ptBR,
+    enUS,
+    ptBR,
   },
-  lng: 'en',
+  lng: 'enUS',
 
   interpolation: {
     escapeValue: false,
