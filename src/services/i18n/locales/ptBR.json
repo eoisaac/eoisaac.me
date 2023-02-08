@@ -4,9 +4,20 @@
         "p1_description": "Apaixonado por programação e tecnologia. Gosto de café e JavaScript",
         "p2_description": "Atualmente estudo React e Typescript",
         "contact_button": "Entrar em contato",
+        "nav_home": "Início",
+        "nav_about": "Sobre",
+        "nav_projects": "Projetos",
+        "nav_articles": "Posts",
+        "nav_contact": "Contato",
         "ptBR": "Português [BR]",
         "enUS": "Inglês [US]",
-        "light_theme":"Tema claro",
-        "dark_theme": "Tema escuro"
+        "light_theme": "Tema claro",
+        "dark_theme": "Tema escuro",
+
+        "about_heading": "Sobre mim",
+        "p1_about": "",
+        "p2_about": "",
+        "p3_about": "",
+        "where_ive_worked": "Experiência"
     }
 }

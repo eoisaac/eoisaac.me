@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { CustomLink } from '../components/CustomLink'
 import { JobNode } from '../components/JobNode'
 import { SocialList } from '../components/SocialList'
@@ -6,8 +7,10 @@ import { BasePage } from '../layouts/BasePage'
 import { BaseSection } from '../layouts/BaseSection'
 
 export const About = () => {
+  const { t } = useTranslation()
+
   return (
-    <BasePage heading="About me">
+    <BasePage heading={t('about_heading')!}>
       <BaseSection heading="A little about myself" srHeading>
         <div
           className="flex flex-col items-center gap-4 sm:flex-row
@@ -55,7 +58,7 @@ export const About = () => {
           </div>
         </div>
       </BaseSection>
-      <BaseSection heading="Where I've Worked">
+      <BaseSection heading={t('where_ive_worked')!}>
         <ol className="ml-4 flex list-disc flex-col gap-4">
           {jobs.map((job) => {
             return <JobNode key={`${job.role}-${job.company.name}`} job={job} />

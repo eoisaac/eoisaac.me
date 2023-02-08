@@ -2,6 +2,7 @@ import { List, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button } from '../components/Button'
+import { useTranslation } from 'react-i18next'
 
 interface MenuLinkProps {
   label: string
@@ -23,6 +24,8 @@ export const Header = () => {
   const [displayMenu, setDisplayMenu] = useState(false)
   const [isScrolling, setIsScrolling] = useState(false)
 
+  const { t } = useTranslation()
+
   useEffect(() => {
     window.onscroll = () => setIsScrolling(window.pageYOffset > 0)
   }, [])
@@ -33,11 +36,11 @@ export const Header = () => {
   }
 
   const navLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Articles', href: '/articles' },
-    { label: 'Contact', href: '/contact' },
+    { label: t('nav_home'), href: '/' },
+    { label: t('nav_about'), href: '/about' },
+    { label: t('nav_projects'), href: '/projects' },
+    { label: t('nav_articles'), href: '/articles' },
+    { label: t('nav_contact'), href: '/contact' },
   ]
 
   return (

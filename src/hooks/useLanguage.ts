@@ -12,10 +12,10 @@ interface UseLanguageProps {
 const getLanguage = () => {
   const storedLanguage = localStorage.getItem('language') as Languages
   const browserLanguage = window.navigator.language.replace('-', '')
-  const preferredIsEnglish = browserLanguage === 'enUS'
+  const preferredIsPortuguese = browserLanguage === 'ptBR'
 
   if (storedLanguage) return storedLanguage
-  return preferredIsEnglish ? 'enUS' : 'ptBR'
+  return preferredIsPortuguese ? 'ptBR' : 'enUS'
 }
 
 export const useLanguage = (): UseLanguageProps => {

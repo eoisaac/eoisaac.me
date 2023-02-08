@@ -4,9 +4,20 @@
         "p1_description": "Programming and technology lover. I like coffee and JavaScript.",
         "p2_description": "I'm currently learning React and Typescript.",
         "contact_button": "Get in touch",
+        "nav_home": "Home",
+        "nav_about": "About",
+        "nav_projects": "Projects",
+        "nav_articles": "Articles",
+        "nav_contact": "Contact",
         "ptBR": "Portuguese [BR]",
         "enUS": "English [US]",
         "light_theme":"Light theme",
-        "dark_theme": "Dark theme"
+        "dark_theme": "Dark theme",
+
+        "about_heading": "About me",
+        "p1_about": "",
+        "p2_about": "",
+        "p3_about": "",
+        "where_ive_worked": "Where I've Worked"
     }
 }
