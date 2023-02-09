@@ -15,8 +15,8 @@
         "dark_theme": "Dark theme",
 
         "about_heading": "About me",
-        "p1_about": "",
-        "p2_about": "",
+        "p1_about": "Meu nome é Isaac Santiago Gomes Pereira, tenho {{ myAge }} anos e nasci em Ouro Branco, MG. Atualmente estou estudando sobre desenvolvimento Front-End e cursando Sistemas de Informação.",
+        "p2_about": "Ao concluir ensino médio, entrei na faculdade de Engenharia de Bioprocessos na UFSJ, onde tive meu primeiro contato com programação durante a matéria de Algoritmos e Estrutura de Dados, na qual aprendi o básico da linguagem C. A partir dai, decidi que queria seguir na carreira de programação.",
         "p3_about": "",
         "where_ive_worked": "Where I've Worked"
     }

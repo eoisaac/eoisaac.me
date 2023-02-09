@@ -9,6 +9,8 @@ import { BaseSection } from '../layouts/BaseSection'
 export const About = () => {
   const { t } = useTranslation()
 
+  const myAge = new Date().getFullYear() - 2001
+
   return (
     <BasePage heading={t('about_heading')!}>
       <BaseSection heading="A little about myself" srHeading>
@@ -31,17 +33,11 @@ export const About = () => {
           </div>
           <div className="flex flex-col gap-2">
             <p>
-              Meu nome é Isaac Santiago Gomes Pereira, tenho 21 anos e nasciem
-              Ouro Branco, MG. Atualmente estou estudando sobre desenvolvimento
-              Front-End e cursando Sistemas de Informação.
+              {t('p1_about', {
+                myAge,
+              })}
             </p>
-            <p>
-              Ao concluir ensino médio, entrei na faculdade de Engenharia de
-              Bioprocessos na UFSJ, onde tive meu primeiro contato com
-              programação durante a matéria de Algoritmos e Estrutura de Dados,
-              na qual aprendi o básico da linguagem C. A partir dai, decidi que
-              queria seguir na carreira de programação.
-            </p>
+            <p>{t('p2_about')}</p>
             <p>
               Por acaso, procurando lives na Twitch, encontrei o
               <CustomLink

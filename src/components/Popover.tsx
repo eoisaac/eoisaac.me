@@ -1,5 +1,5 @@
 import { X } from 'phosphor-react'
-import { ReactNode, useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import { Button } from './Button'
 
 interface PopoverProps {
@@ -17,12 +17,26 @@ export const Popover = ({
 }: PopoverProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
+  const ref = useRef<HTMLDivElement>(null)
+
+  const handleOutsideClick = (event: MouseEvent) => {
+    if (ref.current && !ref.current.contains(event.target as Node)) {
+      setIsVisible(false)
+    }
+  }
+
   const handleIsVisible = () => {
     setIsVisible((prevState) => !prevState)
   }
 
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick)
+
+    return () => document.removeEventListener('click', handleOutsideClick)
+  }, [])
+
   return (
-    <div className="relative">
+    <div className="relative" ref={ref}>
       <Button
         label={label}
         icon={isVisible && icon ? <X weight="bold" /> : icon}
