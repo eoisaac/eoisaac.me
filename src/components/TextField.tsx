@@ -42,8 +42,8 @@ export const TextField = ({
         <textarea
           {...register}
           {...rest}
-          className="w-full bg-transparent text-b-200
-                  placeholder:text-slate-400 focus:shadow-none"
+          className="h-28 max-h-48 w-full bg-transparent
+                  text-b-200 placeholder:text-slate-400 focus:shadow-none"
         />
       </div>
       {hasError && (

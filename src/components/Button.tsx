@@ -33,7 +33,7 @@ export const Button = ({
         iconLeft ? 'flex-row' : 'flex-row-reverse'
       } ${variants[variant]}`}
     >
-      {icon && <div className="text-xl">{icon}</div>}
+      {icon && <div className="pointer-events-none text-xl">{icon}</div>}
       <div className={`${srLabel ? 'sr-only' : 'font-medium'}`}>{label}</div>
     </button>
   )

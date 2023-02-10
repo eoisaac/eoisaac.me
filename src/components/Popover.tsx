@@ -16,7 +16,6 @@ export const Popover = ({
   children,
 }: PopoverProps) => {
   const [isVisible, setIsVisible] = useState(false)
-
   const ref = useRef<HTMLDivElement>(null)
 
   const handleOutsideClick = (event: MouseEvent) => {
@@ -31,7 +30,6 @@ export const Popover = ({
 
   useEffect(() => {
     document.addEventListener('click', handleOutsideClick)
-
     return () => document.removeEventListener('click', handleOutsideClick)
   }, [])
 

@@ -5,9 +5,9 @@ import * as zod from 'zod'
 import { Button } from '../components/Button'
 import { InputField } from '../components/InputField'
 import { TextField } from '../components/TextField'
+import { Toast } from '../components/Toast'
 import { BasePage } from '../layouts/BasePage'
 import { BaseSection } from '../layouts/BaseSection'
-import { sendMessage } from '../services/axios/requests/telegramAPI'
 
 export const Contact = () => {
   const ContactFormSchema = zod.object({
@@ -39,7 +39,7 @@ export const Contact = () => {
       *Email:* ${email}
       *Message:* ${message}
     `
-    sendMessage(formattedMessage)
+    // sendMessage(formattedMessage)
 
     reset()
   }
@@ -80,6 +80,12 @@ export const Contact = () => {
           </form>
         </div>
       </BaseSection>
+      <Toast
+        display={true}
+        heading="Mensagem enviada!"
+        message="Sua mensagem foi enviada com sucesso!"
+        variant="SUCCESS"
+      />
     </BasePage>
   )
 }

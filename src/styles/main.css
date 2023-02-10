@@ -62,7 +62,7 @@
 }
 
 ::selection {
-  @apply bg-m-600 text-b-100;
+  @apply bg-m-500 text-b-100;
 }
 
 :focus {
