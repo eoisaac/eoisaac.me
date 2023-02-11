@@ -1,21 +1,23 @@
 import {
   GithubLogo,
+  House,
   InstagramLogo,
   LinkedinLogo,
   TwitterLogo,
 } from 'phosphor-react'
+import { Social } from '../@types/app'
 
 interface SocialMediaProps {
   name: string
-  href: string
+  url: string
   icon: JSX.Element
 }
 
-const SocialMedia = ({ name, href, icon }: SocialMediaProps) => {
+const SocialMedia = ({ name, url, icon }: SocialMediaProps) => {
   return (
     <li>
       <a
-        href={href}
+        href={url}
         className="hover block"
         title={`My ${name}`}
         target="_blank"
@@ -29,33 +31,42 @@ const SocialMedia = ({ name, href, icon }: SocialMediaProps) => {
 }
 
 export const SocialList = () => {
-  const socialMedias = [
+  const socialList: Social[] = [
+    {
+      name: 'Portfolio',
+      url: 'https://eoisaac-eoisaac.vercel.app/',
+      icon: <House />,
+    },
     {
       name: 'GitHub',
-      href: 'https://github.com/eoisaac',
+      url: 'https://github.com/eoisaac',
       icon: <GithubLogo />,
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/eoisaac',
+      url: 'https://www.linkedin.com/in/eoisaac',
       icon: <LinkedinLogo />,
     },
     {
       name: 'Twitter',
-      href: 'https://twitter.com/eoisaacc',
+      url: 'https://twitter.com/eoisaacc',
       icon: <TwitterLogo />,
     },
     {
       name: 'Instagram',
-      href: 'https://www.instagram.com/eoisaacc',
+      url: 'https://www.instagram.com/eoisaacc',
       icon: <InstagramLogo />,
     },
   ]
 
   return (
     <ul className="flex items-center gap-3">
-      {socialMedias.map(({ name, href, icon }) => {
-        return <SocialMedia key={name} name={name} href={href} icon={icon} />
+      {socialList.map(({ name, url, icon }) => {
+        return (
+          name !== 'Portfolio' && (
+            <SocialMedia key={name} name={name} url={url} icon={icon} />
+          )
+        )
       })}
     </ul>
   )

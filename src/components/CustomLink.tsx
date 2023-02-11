@@ -18,11 +18,11 @@ export const CustomLink = ({
   title,
   icon = false,
 }: CustomLinkProps) => {
-  const style = `relative inline-flex items-center pb-[2px] leading-none
-  text-b-50 before:absolute before:bottom-0 before:left-0 before:block
-  before:h-[1px] before:w-full before:origin-top-left before:scale-x-0
-  before:bg-b-300 before:transition before:duration-200 before:ease-in-out
-  before:content-[''] hover:text-b-300 before:hover:scale-x-100`
+  const style = `relative inline-flex items-center text-b-50 before:absolute
+  before:bottom-0 before:left-0 before:block before:h-[1px] before:w-full
+  before:origin-top-left before:scale-x-0 before:bg-b-300 before:transition
+  before:duration-200 before:ease-in-out before:content-[''] hover:text-b-300
+  before:hover:scale-x-100`
 
   const types = {
     intern: (

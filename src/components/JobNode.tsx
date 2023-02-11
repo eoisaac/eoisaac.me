@@ -7,15 +7,15 @@ interface JobNodeProps {
 
 export const JobNode = ({ job }: JobNodeProps) => {
   const { role, company, start, end } = job
-  const { name, place, link } = company
+  const { name, place, url } = company
 
   return (
     <li className="flex flex-col">
       <h3 className="text-lg font-medium text-b-200 sm:text-xl">{role}</h3>
       <div>
-        {link ? (
+        {url ? (
           <CustomLink
-            href={link}
+            href={url}
             type="external"
             target="_blank"
             label={name}

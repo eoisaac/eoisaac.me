@@ -1,6 +1,6 @@
 {
     "translation": {
-        "role": "Fullstack developer",
+        "role": "Frontend developer",
         "p1_description": "Programming and technology lover. I like coffee and JavaScript.",
         "p2_description": "I'm currently learning React and Typescript.",
         "contact_button": "Get in touch",
@@ -11,13 +11,28 @@
         "nav_contact": "Contact",
         "ptBR": "Portuguese [BR]",
         "enUS": "English [US]",
-        "light_theme":"Light theme",
+        "light_theme": "Light theme",
         "dark_theme": "Dark theme",
-
         "about_heading": "About me",
-        "p1_about": "Meu nome é Isaac Santiago Gomes Pereira, tenho {{ myAge }} anos e nasci em Ouro Branco, MG. Atualmente estou estudando sobre desenvolvimento Front-End e cursando Sistemas de Informação.",
-        "p2_about": "Ao concluir ensino médio, entrei na faculdade de Engenharia de Bioprocessos na UFSJ, onde tive meu primeiro contato com programação durante a matéria de Algoritmos e Estrutura de Dados, na qual aprendi o básico da linguagem C. A partir dai, decidi que queria seguir na carreira de programação.",
-        "p3_about": "",
-        "where_ive_worked": "Where I've Worked"
+        "p1_about": "Hi, my name is Isaac Santiago Gomes Pereira, I am 22 years old and I was born and live in Ouro Branco, MG.",
+        "p2_about": "I started my programming journey in 2019 during my undergraduate Engineering degree, specifically in the Algorithms and Data Structures I subject using C language. I fell in love with the area and decided to switch to the undergraduate Information Systems degree and continue as a developer.",
+        "p3_A_about": "By chance, I found the",
+        "p3_B_about": "channel on Twitch and participated in his basic HTML and CSS course, where I developed a portfolio website. This course awakened my interest in Frontend development, and since then I have been studying algorithms and Frontend technologies.",
+        "where_ive_worked": "Where I've Worked",
+        "technologies": "Technologies",
+        "p1_technologies": "Here are a few technologies I've been working with recently:",
+        "contact_heading": "Get in touch",
+        "p1_contact": "Quer me dizer 'Oi!'? Tem algo que gostaria de perguntar? Algum novo projeto ou oportunidade?",
+        "contact_form_name": "Name",
+        "contact_form_email": "Email",
+        "contact_form_message": "Message",
+        "contact_form_submit": "Send message",
+        "contact_name_field_error": "Please enter a valid name!",
+        "contact_email_field_error": "Invalid email format!",
+        "contact_message_field_error": "The message cannot be empty!",
+        "contact_success_toast_heading": "Message sent!",
+        "contact_success_toast_message": "Your message was successfully sent!",
+        "contact_error_toast_heading": "Message not sent!",
+        "contact_error_toast_message": "Unable to send your message! Please, try again!"
     }
 }

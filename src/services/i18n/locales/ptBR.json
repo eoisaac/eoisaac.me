@@ -1,6 +1,6 @@
 {
     "translation": {
-        "role": "Desenvolvedor Fullstack",
+        "role": "Desenvolvedor Frontend",
         "p1_description": "Apaixonado por programação e tecnologia. Gosto de café e JavaScript",
         "p2_description": "Atualmente estudo React e Typescript",
         "contact_button": "Entrar em contato",
@@ -14,9 +14,25 @@
         "light_theme": "Tema claro",
         "dark_theme": "Tema escuro",
         "about_heading": "Sobre mim",
-        "p1_about": "Meu nome é Isaac Santiago Gomes Pereira, tenho {{ myAge }} anos e nasci em Ouro Branco, MG. Atualmente estou estudando sobre desenvolvimento Front-End e cursando Sistemas de Informação.",
-        "p2_about": "Ao concluir ensino médio, entrei na faculdade de Engenharia de Bioprocessos na UFSJ, onde tive meu primeiro contato com programação durante a matéria de Algoritmos e Estrutura de Dados, na qual aprendi o básico da linguagem C. A partir dai, decidi que queria seguir na carreira de programação.",
-        "p3_about": "",
-        "where_ive_worked": "Experiência"
+        "p1_about": "Oi, meu nome é Isaac Santiago Gomes Pereira, tenho {{ myAge }} anos, nasci e moro em Ouro Branco, MG.",
+        "p2_about": "Comecei minha jornada na programação em 2019 durante o curso de Engenharia, especificamente na matéria de Algoritmos e Estrutura de Dados I utilizando C. Me apaixonei pela área e decidi mudar para o curso de Sistemas de Informação e seguir como desenvolvedor.",
+        "p3_A_about": "Por acaso, encontrei o canal do",
+        "p3_B_about": " na Twitch e participei de seu curso básico de HTML e CSS, onde desenvolvi um site portfólio. Esse curso me despertou interesse pelo desenvolvimento Frontend, e desde então estou estudando algoritmos e tecnologias do Frontend.",
+        "where_ive_worked": "Carreira",
+        "technologies": "Tecnologias",
+        "p1_technologies": "Aqui estão algumas tecnologias que tenho estudado e trabalhado recentemente:",
+        "contact_heading": "Entre em contato",
+        "p1_contact": "Quer me dizer 'Oi!'? Tem algo que gostaria de perguntar? Algum novo projeto ou oportunidade?",
+        "contact_form_name": "Nome",
+        "contact_form_email": "Email",
+        "contact_form_message": "Mensagem",
+        "contact_form_submit": "Enviar mensagem",
+        "contact_name_field_error": "Insira um nome válido!",
+        "contact_email_field_error": "Formato de email inválido!",
+        "contact_message_field_error": "A mensagem não pode estar vazia!",
+        "contact_success_toast_heading": "Mensagem enviada!",
+        "contact_success_toast_message": "Sua mensagem foi enviada com sucesso!",
+        "contact_error_toast_heading": "Mensagem não enviada!",
+        "contact_error_toast_message": "Não foi possível enviar sua mensagem! Por favor, Tente novamente!"
     }
 }

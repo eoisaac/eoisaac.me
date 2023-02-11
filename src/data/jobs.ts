@@ -6,7 +6,7 @@ export const jobs: Job[] = [
     company: {
       name: 'Zumpy',
       place: 'Belo Horizonte, MG',
-      link: 'https://www.zumpy.com.br/',
+      url: 'https://www.zumpy.com.br/',
     },
     start: 'June 2022',
     end: 'Present',

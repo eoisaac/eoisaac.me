@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { PaperPlaneRight } from 'phosphor-react'
 import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import * as zod from 'zod'
 import { Button } from '../components/Button'
 import { InputField } from '../components/InputField'
@@ -13,13 +14,14 @@ import { sendMessage } from '../services/axios/requests/telegramAPI'
 
 export const Contact = () => {
   const { newToast } = useContext(ToastContext)
+  const { t } = useTranslation()
 
   const ContactFormSchema = zod.object({
-    name: zod.string().min(2, { message: 'Insira um nome válido!' }),
-    email: zod.string().email({ message: 'Formato de email inválido!' }),
+    name: zod.string().min(2, { message: t('contact_name_field_error')! }),
+    email: zod.string().email({ message: t('contact_email_field_error')! }),
     message: zod
       .string()
-      .min(2, { message: 'A mensagem não pode estar vazia!' }),
+      .min(2, { message: t('contact_message_field_error')! }),
   })
 
   type ContactFormFormData = zod.infer<typeof ContactFormSchema>
@@ -46,50 +48,47 @@ export const Contact = () => {
 
     if (sentMessage) {
       newToast({
-        heading: 'Mensagem enviada!',
-        message: 'Sua mensagem foi enviada com sucesso!',
+        heading: t('contact_success_toast_heading')!,
+        message: t('contact_success_toast_message'),
         variant: 'SUCCESS',
       })
-      reset()
-      return
+
+      return reset()
     }
 
     newToast({
-      heading: 'Mensagem não enviada!',
-      message: 'Ocorreu um erro durante o envio de sua mensagem! Tente novamente!',
+      heading: t('contact_error_toast_heading')!,
+      message: t('contact_error_toast_message'),
       variant: 'ERROR',
     })
   }
 
   return (
-    <BasePage heading="Get in touch">
+    <BasePage heading={t('contact_heading')!}>
       <BaseSection heading="Get in touch with me" srHeading>
-        <p>
-          Quer me dizer &quot;Oi!&quot;? Tem algo que gostaria de perguntar?
-          Algum novo projeto ou oportunidade?
-        </p>
+        <p>{t('p1_contact')}</p>
         <div className="my-auto">
           <form
             onSubmit={handleSubmit(handleContactSubmit)}
             className="flex flex-col items-center gap-2 sm:max-w-xs"
           >
             <InputField
-              label="Name"
+              label={t('contact_form_name')}
               register={register('name', { required: true })}
               errorMessage={errors.name && errors.name.message}
             />
             <InputField
-              label="Email"
+              label={t('contact_form_email')}
               register={register('email', { required: true })}
               errorMessage={errors.email && errors.email.message}
             />
             <TextField
-              label="Message"
+              label={t('contact_form_message')}
               register={register('message', { required: true })}
               errorMessage={errors.message && errors.message.message}
             />
             <Button
-              label="Send"
+              label={t('contact_form_submit')}
               type="submit"
               className="mt-3 w-full justify-center"
               icon={<PaperPlaneRight weight="bold" />}

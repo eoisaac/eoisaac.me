@@ -1,7 +1,7 @@
 export interface Company {
   name: string
   place: string
-  link?: string
+  url?: string
 }
 
 export interface Job {
@@ -9,6 +9,12 @@ export interface Job {
   company: Company
   start: string
   end: string
+}
+
+export interface Social {
+  name: string
+  icon: JSX.Element
+  url: string
 }
 
 export interface Repository {

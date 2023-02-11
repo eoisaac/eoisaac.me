@@ -10,6 +10,15 @@ export const About = () => {
   const { t } = useTranslation()
 
   const myAge = new Date().getFullYear() - 2001
+  const technologies = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Typescript',
+    'React',
+    'Styled Components',
+    'Tailwindcss',
+  ]
 
   return (
     <BasePage heading={t('about_heading')!}>
@@ -24,8 +33,8 @@ export const About = () => {
                 src="./assets/images/me.jpg"
                 alt="Isaac wearing a blue hoodie picture."
                 loading="lazy"
-                className="rounded-md shadow-md grayscale transition-all
-                duration-200 hover:grayscale-0"
+                className="max-w-[16rem] rounded-md shadow-md grayscale
+                transition-all duration-200 hover:grayscale-0"
               />
               <figcaption className="sr-only">Isaac Santiago.</figcaption>
             </figure>
@@ -39,20 +48,27 @@ export const About = () => {
             </p>
             <p>{t('p2_about')}</p>
             <p>
-              Por acaso, procurando lives na Twitch, encontrei o
+              <span>{t('p3_A_about')}</span>
               <CustomLink
-                label="canal do Marco Bruno"
+                label="Marco Bruno"
                 href="https://www.twitch.tv/marcobrunodev"
               />
-              e comecei a segui-lo. Ele estava desenvolvendo uma plataforma de
-              cursos, a FiredLabs, que possui um curso básico sobre HTML e CSS,
-              no qual o projeto era desenvolver um site portfólio. Após terminar
-              esse curso, comecei a me interessar mais por desenvolver sites, e,
-              desde então, venho estudando JavaScript, HTML e CSS, e, tenho como
-              objetivo aprender React e Node futuramente.
+              <span>{t('p3_B_about')}</span>
             </p>
           </div>
         </div>
+      </BaseSection>
+      <BaseSection heading={t('technologies')!}>
+        <p>{t('p1_technologies')}</p>
+        <ul className="ml-4 grid sm:grid-cols-2">
+          {technologies.map((tech) => {
+            return (
+              <li key={tech} className="text-b-300">
+                {tech}
+              </li>
+            )
+          })}
+        </ul>
       </BaseSection>
       <BaseSection heading={t('where_ive_worked')!}>
         <ol className="ml-4 flex list-disc flex-col gap-4">
