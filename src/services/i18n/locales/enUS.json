@@ -21,6 +21,8 @@
         "where_ive_worked": "Where I've Worked",
         "technologies": "Technologies",
         "p1_technologies": "Here are a few technologies I've been working with recently:",
+        "p1_projects": "Here you can find my {{ reposAmount }} projects, including websites and apps that I built.",
+        "p2_projects": "If you prefer, you can access my",
         "contact_heading": "Get in touch",
         "p1_contact": "Quer me dizer 'Oi!'? Tem algo que gostaria de perguntar? Algum novo projeto ou oportunidade?",
         "contact_form_name": "Name",
@@ -33,6 +35,9 @@
         "contact_success_toast_heading": "Message sent!",
         "contact_success_toast_message": "Your message was successfully sent!",
         "contact_error_toast_heading": "Message not sent!",
-        "contact_error_toast_message": "Unable to send your message! Please, try again!"
+        "contact_error_toast_message": "Unable to send your message! Please, try again!",
+        "not_found_heading": "Page not found!",
+        "not_found_message": "Sorry, the page you requested could not be found. Please check the URL and try again or return to the homepage.",
+        "not_found_button": "Return to home"
     }
 }

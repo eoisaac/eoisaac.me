@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { useQuery } from 'react-query'
 import { Repository } from '../@types/app'
 import { CustomLink } from '../components/CustomLink'
@@ -8,6 +9,8 @@ import { BaseSection } from '../layouts/BaseSection'
 import { getRepositories } from '../services/axios/requests/githubAPI'
 
 export const Projects = () => {
+  const { t } = useTranslation()
+
   const { data: repositories, isFetching } = useQuery<Repository[]>(
     'REPOSITORIES',
     getRepositories,
@@ -16,16 +19,22 @@ export const Projects = () => {
   return (
     <BasePage heading="My projects">
       <BaseSection heading="A little about myself" srHeading>
-        <p>
-          Here you can find my {repositories?.length} different websites, apps,
-          and libraries that I built. If you prefer, you can access my
-          <CustomLink
-            href="https://github.com/eoisaac?tab=repositories"
-            type="external"
-            label="GitHub repositories"
-          />
-          .
-        </p>
+        <div>
+          <p>
+            {t('p1_projects', {
+              reposAmount: repositories?.length,
+            })}
+          </p>
+          <p>
+            {t('p2_projects')}
+            <CustomLink
+              href="https://github.com/eoisaac?tab=repositories"
+              type="external"
+              label="GitHub"
+            />
+            .
+          </p>
+        </div>
 
         {isFetching || !repositories ? (
           <Loading />

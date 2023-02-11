@@ -21,6 +21,8 @@
         "where_ive_worked": "Carreira",
         "technologies": "Tecnologias",
         "p1_technologies": "Aqui estão algumas tecnologias que tenho estudado e trabalhado recentemente:",
+        "p1_projects": "Aqui estão os {{ reposAmount }} projetos, como websites e aplicativos que desenvolvi.",
+        "p2_projects": "Caso prefira, você pode acessar meu",
         "contact_heading": "Entre em contato",
         "p1_contact": "Quer me dizer 'Oi!'? Tem algo que gostaria de perguntar? Algum novo projeto ou oportunidade?",
         "contact_form_name": "Nome",
@@ -33,6 +35,9 @@
         "contact_success_toast_heading": "Mensagem enviada!",
         "contact_success_toast_message": "Sua mensagem foi enviada com sucesso!",
         "contact_error_toast_heading": "Mensagem não enviada!",
-        "contact_error_toast_message": "Não foi possível enviar sua mensagem! Por favor, Tente novamente!"
+        "contact_error_toast_message": "Não foi possível enviar sua mensagem! Por favor, Tente novamente!",
+        "not_found_heading": "Página não encontrada!",
+        "not_found_message": "Desculpe, página solicitada não pôde ser encontrada. Verifique o URL e tente novamente ou retorne à página inicial.",
+        "not_found_button": "Voltar ao início"
     }
 }

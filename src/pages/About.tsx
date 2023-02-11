@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
+import { Job } from '../@types/app'
 import { CustomLink } from '../components/CustomLink'
 import { JobNode } from '../components/JobNode'
 import { SocialList } from '../components/SocialList'
-import { jobs } from '../data/jobs'
 import { BasePage } from '../layouts/BasePage'
 import { BaseSection } from '../layouts/BaseSection'
 
@@ -19,6 +19,18 @@ export const About = () => {
     'Styled Components',
     'Tailwindcss',
   ]
+  const jobs: Job[] = [
+    {
+      role: 'Frontend Intern',
+      company: {
+        name: 'Zumpy',
+        place: 'Belo Horizonte, MG',
+        url: 'https://www.zumpy.com.br/',
+      },
+      start: 'June 2022',
+      end: 'Present',
+    },
+  ]
 
   return (
     <BasePage heading={t('about_heading')!}>
@@ -28,13 +40,13 @@ export const About = () => {
         sm:items-start"
         >
           <div>
-            <figure className="mb-4">
+            <figure className="relative mb-4">
               <img
                 src="./assets/images/me.jpg"
                 alt="Isaac wearing a blue hoodie picture."
                 loading="lazy"
-                className="max-w-[16rem] rounded-md shadow-md grayscale
-                transition-all duration-200 hover:grayscale-0"
+                className="h-fit max-w-[16rem] rounded-md object-cover shadow-md
+                grayscale-[80%] transition-all duration-200 hover:grayscale-0"
               />
               <figcaption className="sr-only">Isaac Santiago.</figcaption>
             </figure>
