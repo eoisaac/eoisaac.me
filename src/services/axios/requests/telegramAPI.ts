@@ -9,13 +9,15 @@ export const getUpdate = async () => {
 
 export const sendMessage = async (message: string) => {
   try {
-    const response = await telegram.get(`/sendMessage`, {
+    const { data } = await telegram.get(`/sendMessage`, {
       params: {
         chat_id: TELEGRAM_CHAT_ID,
         parse_mode: 'Markdown',
         text: message,
       },
     })
+
+    return data.ok
   } catch (e) {
     console.log(e)
   }

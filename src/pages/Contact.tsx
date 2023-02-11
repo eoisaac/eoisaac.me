@@ -9,6 +9,7 @@ import { TextField } from '../components/TextField'
 import { ToastContext } from '../contexts/ToastContext'
 import { BasePage } from '../layouts/BasePage'
 import { BaseSection } from '../layouts/BaseSection'
+import { sendMessage } from '../services/axios/requests/telegramAPI'
 
 export const Contact = () => {
   const { newToast } = useContext(ToastContext)
@@ -30,25 +31,34 @@ export const Contact = () => {
   const { formState, register, handleSubmit, reset } = ContactForm
   const { errors } = formState
 
-  const handleContactSubmit = ({
+  const handleContactSubmit = async ({
     name,
     email,
     message,
   }: ContactFormFormData) => {
-    const formattedMessage = `
-      Contact form:
-      *At:* ${Date.now()}
-      *Name:* ${name}
-      *Email:* ${email}
-      *Message:* ${message}
-    `
+    const sentMessage = await sendMessage(`
+    Contact form:
+    *At:* ${Date.now()}
+    *Name:* ${name}
+    *Email:* ${email}
+    *Message:* ${message}
+  `)
+
+    if (sentMessage) {
+      newToast({
+        heading: 'Mensagem enviada!',
+        message: 'Sua mensagem foi enviada com sucesso!',
+        variant: 'SUCCESS',
+      })
+      reset()
+      return
+    }
+
     newToast({
-      heading: 'Mensagem enviada!',
-      message: 'Sua mensagem foi enviada com sucesso!',
-      variant: 'SUCCESS',
+      heading: 'Mensagem não enviada!',
+      message: 'Ocorreu um erro durante o envio de sua mensagem! Tente novamente!',
+      variant: 'ERROR',
     })
-    // sendMessage(formattedMessage)
-    // reset()
   }
 
   return (
