@@ -1,6 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { PaperPlaneRight } from 'phosphor-react'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
 import { Button } from '../components/Button'
@@ -12,8 +12,6 @@ import { BaseSection } from '../layouts/BaseSection'
 
 export const Contact = () => {
   const { newToast } = useContext(ToastContext)
-
-  const [sentMessage, setSentMessage] = useState(false)
 
   const ContactFormSchema = zod.object({
     name: zod.string().min(2, { message: 'Insira um nome válido!' }),
@@ -44,7 +42,6 @@ export const Contact = () => {
       *Email:* ${email}
       *Message:* ${message}
     `
-    setSentMessage(true)
     newToast({
       heading: 'Mensagem enviada!',
       message: 'Sua mensagem foi enviada com sucesso!',

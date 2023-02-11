@@ -1,4 +1,5 @@
-import { ReactNode, createContext, useState } from 'react'
+import autoAnimate from '@formkit/auto-animate'
+import { ReactNode, createContext, useEffect, useRef, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { ToastBase, ToastType } from '../@types/toast'
 import { Toast } from '../components/Toast'
@@ -19,7 +20,18 @@ export const ToastContextProvider = ({
 }: ToastContextProviderProps) => {
   const [toastList, setToastList] = useState<ToastType[]>([])
 
-  const newToast = ({ heading = '', message, variant = 'INFO' }: ToastBase) => {
+  const toastListRef = useRef(null)
+
+  useEffect(() => {
+    toastListRef.current && autoAnimate(toastListRef.current)
+  }, [toastListRef])
+
+  const newToast = ({
+    heading = '',
+    message,
+    variant = 'INFO',
+    autoCloseTimeout = 3000,
+  }: ToastBase) => {
     setToastList((prevState) => [
       {
         id: uuidv4(),
@@ -27,6 +39,7 @@ export const ToastContextProvider = ({
         message,
         display: true,
         variant,
+        autoCloseTimeout,
       },
       ...prevState,
     ])
@@ -45,20 +58,24 @@ export const ToastContextProvider = ({
       }}
     >
       <ul
-        className="fixed right-0 top-0 z-40 flex max-w-xs flex-col gap-1 
-      sm:gap-4 sm:p-4"
+        ref={toastListRef}
+        className="fixed z-40 flex w-full max-w-xs flex-col gap-1 sm:right-4 
+      sm:top-4 sm:gap-4"
       >
-        {toastList.map(({ id, heading, message, variant }) => {
-          return (
-            <Toast
-              key={id}
-              id={id}
-              heading={heading}
-              message={message}
-              variant={variant}
-            />
-          )
-        })}
+        {toastList.map(
+          ({ id, heading, message, variant, autoCloseTimeout }) => {
+            return (
+              <Toast
+                key={id}
+                id={id}
+                heading={heading}
+                message={message}
+                variant={variant}
+                autoCloseTimeout={autoCloseTimeout}
+              />
+            )
+          },
+        )}
       </ul>
 
       {children}

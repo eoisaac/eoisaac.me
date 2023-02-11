@@ -1,21 +1,16 @@
 import { CheckCircle, Info, Warning, X, XCircle } from 'phosphor-react'
 import { useContext } from 'react'
+import { ToastType } from '../@types/toast'
 import { ToastContext } from '../contexts/ToastContext'
 import { Button } from './Button'
 
-interface ToastProps {
-  id: string
-  heading?: string
-  message?: string
-  variant?: 'SUCCESS' | 'WARNING' | 'ERROR' | 'INFO'
-}
-
 export const Toast = ({
   id,
-  heading = '',
-  message = '',
-  variant = 'INFO',
-}: ToastProps) => {
+  heading,
+  message,
+  variant,
+  autoCloseTimeout,
+}: ToastType) => {
   const { removeToast } = useContext(ToastContext)
 
   const variants = {
@@ -39,16 +34,21 @@ export const Toast = ({
   const color = variants[variant].color
   const icon = variants[variant].icon
 
+  const closeTimeout = setTimeout(() => {
+    removeToast(id)
+  }, autoCloseTimeout)
+
   const handleRemoveToast = () => {
+    clearTimeout(closeTimeout)
     removeToast(id)
   }
 
   return (
     <div
-      className={`bg-dark firefox:bg-opacity-100 relative top-0 right-0 z-50 flex
-      w-full max-w-xs items-center gap-2 rounded-md border border-b-600
-      bg-opacity-30 p-2 shadow-md backdrop-blur-lg backdrop-saturate-150
-      backdrop-filter transition-all duration-200 sm:top-4 sm:right-4`}
+      className={`bg-dark firefox:bg-opacity-100 flex w-full max-w-xs
+      items-center gap-2 rounded-md border border-b-600 bg-opacity-30 p-2
+      shadow-md backdrop-blur-lg backdrop-saturate-150 backdrop-filter
+      transition-all duration-200 sm:top-4 sm:right-4`}
     >
       <div className={`text-2xl ${color}`}>{icon}</div>
       <div className="flex-1">
