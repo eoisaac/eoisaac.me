@@ -56,7 +56,6 @@ export const ToastContextProvider = ({
               heading={heading}
               message={message}
               variant={variant}
-              display={true}
             />
           )
         })}

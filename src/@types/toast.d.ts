@@ -6,5 +6,4 @@ export interface ToastBase {
 
 export interface ToastType extends ToastBase {
   id: string
-  display: boolean
 }

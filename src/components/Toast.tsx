@@ -7,7 +7,6 @@ interface ToastProps {
   id: string
   heading?: string
   message?: string
-  display: boolean
   variant?: 'SUCCESS' | 'WARNING' | 'ERROR' | 'INFO'
 }
 
@@ -15,7 +14,6 @@ export const Toast = ({
   id,
   heading = '',
   message = '',
-  display,
   variant = 'INFO',
 }: ToastProps) => {
   const { removeToast } = useContext(ToastContext)
@@ -50,8 +48,7 @@ export const Toast = ({
       className={`bg-dark firefox:bg-opacity-100 relative top-0 right-0 z-50 flex
       w-full max-w-xs items-center gap-2 rounded-md border border-b-600
       bg-opacity-30 p-2 shadow-md backdrop-blur-lg backdrop-saturate-150
-      backdrop-filter transition-all duration-200 sm:top-4 sm:right-4
-      ${display ? '-translate-x-0' : 'translate-x-full sm:right-0'}`}
+      backdrop-filter transition-all duration-200 sm:top-4 sm:right-4`}
     >
       <div className={`text-2xl ${color}`}>{icon}</div>
       <div className="flex-1">
