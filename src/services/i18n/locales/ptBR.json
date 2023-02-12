@@ -39,6 +39,7 @@
         "contact_error_toast_message": "Não foi possível enviar sua mensagem! Por favor, Tente novamente!",
         "not_found_heading": "Página não encontrada!",
         "not_found_message": "Desculpe, página solicitada não pôde ser encontrada. Verifique o URL e tente novamente ou retorne à página inicial.",
-        "not_found_button": "Voltar ao início"
+        "not_found_button": "Voltar ao início",
+        "articles_search_input": "Buscar artigo"
     }
 }

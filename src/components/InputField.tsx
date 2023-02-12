@@ -38,8 +38,8 @@ export const InputField = ({
       >
         {hasIcon && (
           <div
-            className="text-lg text-slate-300
-          group-focus-within:text-violet-500"
+            className="absolute pl-2 text-lg text-b-500
+          group-focus-within:text-m-400"
           >
             {icon}
           </div>
@@ -48,8 +48,10 @@ export const InputField = ({
           {...register}
           {...rest}
           type={type}
-          className="w-full bg-transparent px-2 py-1 text-b-200
-          placeholder:text-slate-400 focus:shadow-none"
+          className={`w-full bg-transparent px-2 py-1 text-b-200
+          placeholder:text-slate-400 focus:shadow-none ${
+            hasIcon ? 'pl-8' : ''
+          }`}
         />
       </div>
       {hasError && (

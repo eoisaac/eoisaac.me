@@ -1,11 +1,22 @@
 import axios from 'axios'
 
+const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN
+const VITE_DEV_API_KEY = import.meta.env.VITE_DEV_API_KEY
+
 export const github = axios.create({
   baseURL: 'https://api.github.com',
 })
 
-const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN
-
 export const telegram = axios.create({
   baseURL: `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`,
+})
+
+export const dev = axios.create({
+  baseURL: `https://dev.to/api/articles`,
+  headers: {
+    accept: 'application/vnd.forem.api-v1+json',
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'api-key': VITE_DEV_API_KEY,
+  },
 })

@@ -39,6 +39,7 @@
         "contact_error_toast_message": "Unable to send your message! Please, try again!",
         "not_found_heading": "Page not found!",
         "not_found_message": "Sorry, the page you requested could not be found. Please check the URL and try again or return to the homepage.",
-        "not_found_button": "Return to home"
+        "not_found_button": "Return to home",
+        "articles_search_input": "Search article"
     }
 }

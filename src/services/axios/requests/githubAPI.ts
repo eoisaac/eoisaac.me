@@ -5,13 +5,19 @@ const GITHUB = {
 }
 
 export const getUserProfile = async () => {
-  const response = await github.get(`/users/${GITHUB.USER}`)
-
-  return response.data
+  try {
+    const response = await github.get(`/users/${GITHUB.USER}`)
+    return response.data
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 export const getRepositories = async () => {
-  const response = await github.get(`/users/${GITHUB.USER}/repos`)
-
-  return response.data
+  try {
+    const response = await github.get(`/users/${GITHUB.USER}/repos`)
+    return response.data
+  } catch (e) {
+    console.log(e)
+  }
 }

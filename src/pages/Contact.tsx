@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { PaperPlaneRight } from 'phosphor-react'
+import { At, PaperPlaneRight, Pencil, User } from 'phosphor-react'
 import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
@@ -79,16 +79,19 @@ export const Contact = () => {
               label={t('contact_form_name')}
               register={register('name', { required: true })}
               errorMessage={errors.name && errors.name.message}
+              icon={<User />}
             />
             <InputField
               label={t('contact_form_email')}
               register={register('email', { required: true })}
               errorMessage={errors.email && errors.email.message}
+              icon={<At />}
             />
             <TextField
               label={t('contact_form_message')}
               register={register('message', { required: true })}
               errorMessage={errors.message && errors.message.message}
+              icon={<Pencil />}
             />
             <Button
               label={t('contact_form_submit')}

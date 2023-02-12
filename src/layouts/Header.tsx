@@ -39,7 +39,7 @@ export const Header = () => {
     { label: t('nav_home'), href: '/' },
     { label: t('nav_about'), href: '/about' },
     { label: t('nav_projects'), href: '/projects' },
-    // { label: t('nav_articles'), href: '/articles' },
+    { label: t('nav_articles'), href: '/articles' },
     { label: t('nav_contact'), href: '/contact' },
   ]
 

@@ -30,20 +30,25 @@ export const TextField = ({
         {label}
       </span>
       <div
-        className="flex flex-1 items-center gap-2
+        className="flex flex-1 items-start gap-2
         overflow-hidden rounded-md border-2 border-b-700 bg-transparent
-        px-2 py-1 shadow-sm group-focus-within:border-m-500"
+        shadow-sm group-focus-within:border-m-500"
       >
         {hasIcon && (
-          <div className="text-lg text-slate-300 group-focus-within:text-violet-500">
+          <div
+            className="absolute pl-2 pt-2 text-lg text-b-500
+          group-focus-within:text-m-400"
+          >
             {icon}
           </div>
         )}
         <textarea
           {...register}
           {...rest}
-          className="h-28 max-h-48 w-full bg-transparent
-                  text-b-200 placeholder:text-slate-400 focus:shadow-none"
+          className={`h-28 max-h-48 w-full bg-transparent px-2 py-1 text-b-200
+          placeholder:text-slate-400 focus:shadow-none ${
+            hasIcon ? 'pl-8' : ''
+          }`}
         />
       </div>
       {hasError && (
