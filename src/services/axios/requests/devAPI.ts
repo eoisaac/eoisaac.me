@@ -1,7 +1,7 @@
 import { devV1, devV2 } from '../instances'
 
 const DEV = {
-  USER: 'danielhe4rt',
+  USER: 'eoisaac',
 }
 
 export const getArticlesV1 = async () => {

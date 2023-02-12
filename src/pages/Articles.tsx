@@ -1,5 +1,6 @@
+import autoAnimate from '@formkit/auto-animate'
 import { MagnifyingGlass } from 'phosphor-react'
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useQuery } from 'react-query'
 import { Article } from '../@types/app'
@@ -11,6 +12,8 @@ import { getArticlesV1 } from '../services/axios/requests/devAPI'
 
 export const Articles = () => {
   const { t } = useTranslation()
+  const articlesRef = useRef(null)
+
   const [filter, setFilter] = useState<string>('')
 
   const {
@@ -33,12 +36,16 @@ export const Articles = () => {
     setFilter(event.target.value.toLowerCase())
   }
 
+  useEffect(() => {
+    articlesRef.current && autoAnimate(articlesRef.current)
+  }, [articlesRef])
+
   return (
-    <BasePage heading="All posts">
+    <BasePage heading={t('articles_heading')!}>
       <div>
         <form>
           <InputField
-            label={t('articles_search_input')}
+            label={t('articles_filter_input')}
             icon={<MagnifyingGlass />}
             onChange={handleFilterSearch}
           />
@@ -48,7 +55,7 @@ export const Articles = () => {
       {!hasArticles ? (
         <Loading />
       ) : (
-        <ol className="grid gap-4 sm:grid-cols-2">
+        <ol ref={articlesRef} className="grid gap-4 sm:grid-cols-2">
           {hasFilteredArticles
             ? filteredArticles.map((article) => {
                 return <ArticleCard key={article.id} data={article} />

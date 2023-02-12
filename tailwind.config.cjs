@@ -45,6 +45,54 @@ module.exports = {
         'd-500': 'rgb(var(--danger-500) / <alpha-value>)',
         'd-300': 'rgb(var(--danger-300) / <alpha-value>)',
       },
+      keyframes: {
+        bSlideT: {
+          '0%': {
+            transform: 'translateY(60%)',
+            opacity: 0,
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            opacity: 1,
+          },
+        },
+        tSlideB: {
+          '0%': {
+            transform: 'translateY(-60%)',
+            opacity: 0,
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            opacity: 1,
+          },
+        },
+        lSlideR: {
+          '0%': {
+            transform: 'translateX(-60%)',
+            opacity: 0,
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: 1,
+          },
+        },
+        rSlideL: {
+          '0%': {
+            transform: 'translateX(60%)',
+            opacity: 0,
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: 1,
+          },
+        },
+      },
+      animation: {
+        bSlideT: 'bSlideT 700ms linear',
+        tSlideB: 'tSlideB 700ms linear',
+        lSlideR: 'lSlideR 700ms linear',
+        rSlideL: 'rSlideL 700ms linear',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

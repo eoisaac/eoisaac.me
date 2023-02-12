@@ -40,6 +40,7 @@
         "not_found_heading": "Page not found!",
         "not_found_message": "Sorry, the page you requested could not be found. Please check the URL and try again or return to the homepage.",
         "not_found_button": "Return to home",
-        "articles_search_input": "Search article"
+        "articles_heading": "All posts",
+        "articles_filter_input": "Filter article"
     }
 }

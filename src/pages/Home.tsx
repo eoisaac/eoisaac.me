@@ -10,7 +10,7 @@ export const Home = () => {
   return (
     <BasePage>
       <div className="my-auto flex flex-col gap-4">
-        <div>
+        <div className="animate-tSlideB">
           <h1
             className="md:leading-14 text-3xl font-extrabold leading-9
           tracking-tight text-b-100 drop-shadow-sm sm:text-4xl
@@ -26,17 +26,19 @@ export const Home = () => {
           </strong>
         </div>
 
-        <div>
-          <p>{t('p1_description')}</p>
-          <p>{t('p2_description')}</p>
-        </div>
+        <div className="animate-bSlideT">
+          <div className="mb-4">
+            <p>{t('p1_description')}</p>
+            <p>{t('p2_description')}</p>
+          </div>
 
-        <Link to="/contact" className="self-start focus:shadow-none">
-          <Button
-            label={t('contact_button')}
-            icon={<PaperPlaneRight weight="bold" />}
-          />
-        </Link>
+          <Link to="/contact" className="self-start focus:shadow-none">
+            <Button
+              label={t('contact_button')}
+              icon={<PaperPlaneRight weight="bold" />}
+            />
+          </Link>
+        </div>
       </div>
     </BasePage>
   )
