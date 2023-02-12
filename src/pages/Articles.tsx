@@ -3,10 +3,11 @@ import { ChangeEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useQuery } from 'react-query'
 import { Article } from '../@types/app'
+import { ArticleCard } from '../components/ArticleCard'
 import { InputField } from '../components/InputField'
 import { Loading } from '../components/Loading'
 import { BasePage } from '../layouts/BasePage'
-import { getArticlesV2 } from '../services/axios/requests/devAPI'
+import { getArticlesV1 } from '../services/axios/requests/devAPI'
 
 export const Articles = () => {
   const { t } = useTranslation()
@@ -16,7 +17,7 @@ export const Articles = () => {
     data: articles,
     isFetching,
     isError,
-  } = useQuery<Article[]>('ARTICLES', getArticlesV2)
+  } = useQuery<Article[]>('ARTICLES', getArticlesV1)
   const hasArticles = !isFetching && !isError && articles
 
   const filteredArticles = hasArticles
@@ -27,8 +28,6 @@ export const Articles = () => {
       )
     : []
   const hasFilteredArticles = filteredArticles.length !== 0
-
-  hasArticles && console.log(articles)
 
   const handleFilterSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setFilter(event.target.value.toLowerCase())
@@ -49,16 +48,13 @@ export const Articles = () => {
       {!hasArticles ? (
         <Loading />
       ) : (
-        <ol
-          // className="grid gap-4 sm:grid-cols-2"
-          className="flex flex-col gap-4"
-        >
+        <ol className="grid gap-4 sm:grid-cols-2">
           {hasFilteredArticles
             ? filteredArticles.map((article) => {
-                return <li key={article.id}>{article.title}</li>
+                return <ArticleCard key={article.id} data={article} />
               })
             : articles.map((article) => {
-                return <li key={article.id}>{article.title}</li>
+                return <ArticleCard key={article.id} data={article} />
               })}
         </ol>
       )}

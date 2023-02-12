@@ -1,10 +1,14 @@
-import { dev } from '../instances'
+import { devV1, devV2 } from '../instances'
+
+const DEV = {
+  USER: 'danielhe4rt',
+}
 
 export const getArticlesV1 = async () => {
   try {
-    const response = await dev.get('/', {
+    const response = await devV1.get('/', {
       params: {
-        username: 'eoisaac',
+        username: DEV.USER,
       },
     })
     return response.data
@@ -15,16 +19,25 @@ export const getArticlesV1 = async () => {
 
 export const getArticlesV2 = async () => {
   try {
-    const response = await dev.get('/me/all')
+    const response = await devV2.get('/me/all')
     return response.data
   } catch (e) {
     console.log(e)
   }
 }
 
-export const getArticle = async (articleId: string) => {
+export const getArticleV1 = async (articleId: string) => {
   try {
-    const response = await dev.get(`/${articleId}`)
+    const response = await devV1.get(`/${articleId}`)
+    return response.data
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+export const getArticleV2 = async (articleId: string) => {
+  try {
+    const response = await devV2.get(`/${articleId}`)
     return response.data
   } catch (e) {
     console.log(e)

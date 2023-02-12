@@ -11,12 +11,14 @@ export const telegram = axios.create({
   baseURL: `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`,
 })
 
-export const dev = axios.create({
+export const devV1 = axios.create({
+  baseURL: `https://dev.to/api/articles`,
+})
+
+export const devV2 = axios.create({
   baseURL: `https://dev.to/api/articles`,
   headers: {
     accept: 'application/vnd.forem.api-v1+json',
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
     'api-key': VITE_DEV_API_KEY,
   },
 })
