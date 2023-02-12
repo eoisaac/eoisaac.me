@@ -66,7 +66,10 @@ export const Contact = () => {
   return (
     <BasePage heading={t('contact_heading')!}>
       <BaseSection heading="Get in touch with me" srHeading>
-        <p>{t('p1_contact')}</p>
+        <div>
+          <p>{t('p1_contact')}</p>
+          <p>{t('p2_contact')}</p>
+        </div>
         <div className="my-auto">
           <form
             onSubmit={handleSubmit(handleContactSubmit)}
