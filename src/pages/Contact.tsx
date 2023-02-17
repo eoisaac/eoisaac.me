@@ -66,11 +66,11 @@ export const Contact = () => {
   return (
     <BasePage heading={t('contact_heading')!}>
       <BaseSection heading="Get in touch with me" srHeading>
-        <div className="animate-lSlideR">
+        <div>
           <p>{t('p1_contact')}</p>
           <p>{t('p2_contact')}</p>
         </div>
-        <div className="my-auto animate-bSlideT">
+        <div className="my-auto">
           <form
             onSubmit={handleSubmit(handleContactSubmit)}
             className="flex flex-col items-center gap-2 sm:max-w-xs"

@@ -39,7 +39,7 @@ export const About = () => {
           className="flex flex-col items-center gap-4 sm:flex-row
         sm:items-start"
         >
-          <div className="animate-lSlideR">
+          <div>
             <figure className="relative mb-4">
               <img
                 src="./assets/images/me.jpg"
@@ -52,7 +52,7 @@ export const About = () => {
             </figure>
             <SocialList />
           </div>
-          <div className="flex animate-rSlideL flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <p>
               {t('p1_about', {
                 myAge,
@@ -71,8 +71,8 @@ export const About = () => {
         </div>
       </BaseSection>
       <BaseSection heading={t('technologies')!}>
-        <p className="animate-bSlideT">{t('p1_technologies')}</p>
-        <ul className="ml-4 grid animate-bSlideT sm:grid-cols-2">
+        <p>{t('p1_technologies')}</p>
+        <ul className="ml-4 grid sm:grid-cols-2">
           {technologies.map((tech) => {
             return (
               <li key={tech} className="text-b-300">
@@ -83,7 +83,7 @@ export const About = () => {
         </ul>
       </BaseSection>
       <BaseSection heading={t('where_ive_worked')!}>
-        <ol className="ml-4 flex animate-bSlideT list-disc flex-col gap-4">
+        <ol className="ml-4 flex list-disc flex-col gap-4">
           {jobs.map((job) => {
             return <JobNode key={`${job.role}-${job.company.name}`} job={job} />
           })}
