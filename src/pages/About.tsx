@@ -40,9 +40,9 @@ export const About = () => {
         sm:items-start"
         >
           <div>
-            <figure className="relative mb-4">
+            <figure className="relative mb-8">
               <img
-                src="./assets/images/me.jpg"
+                src="https://avatars.githubusercontent.com/u/79121397?v=4"
                 alt="Isaac wearing a blue hoodie picture."
                 loading="lazy"
                 className="h-fit max-w-[16rem] rounded-md object-cover shadow-md

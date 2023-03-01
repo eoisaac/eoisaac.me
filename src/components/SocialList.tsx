@@ -7,36 +7,18 @@ import {
 } from 'phosphor-react'
 import { Social } from '../@types/app'
 
-interface SocialMediaProps {
-  name: string
-  url: string
-  icon: JSX.Element
+interface SocialListProps {
+  column?: boolean
+  socialLabel?: boolean
+  displayPortfolioLink?: boolean
 }
 
-const SocialMedia = ({ name, url, icon }: SocialMediaProps) => {
-  return (
-    <li>
-      <a
-        href={url}
-        className="hover block"
-        title={`My ${name}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div className="bg-transparent text-2xl">{icon}</div>
-        <span className="sr-only">{`My ${name}`}</span>
-      </a>
-    </li>
-  )
-}
-
-export const SocialList = () => {
+export const SocialList = ({
+  column = false,
+  socialLabel = false,
+  displayPortfolioLink = false,
+}: SocialListProps) => {
   const socialList: Social[] = [
-    {
-      name: 'Portfolio',
-      url: 'https://eoisaac-eoisaac.vercel.app/',
-      icon: <House />,
-    },
     {
       name: 'GitHub',
       url: 'https://github.com/eoisaac',
@@ -48,24 +30,45 @@ export const SocialList = () => {
       icon: <LinkedinLogo />,
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/eoisaacc',
-      icon: <TwitterLogo />,
-    },
-    {
       name: 'Instagram',
       url: 'https://www.instagram.com/eoisaacc',
       icon: <InstagramLogo />,
     },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/eoisaacc',
+      icon: <TwitterLogo />,
+    },
   ]
 
+  if (displayPortfolioLink) {
+    socialList.unshift({
+      name: 'Portfolio',
+      url: 'https://eoisaac-eoisaac.vercel.app/',
+      icon: <House />,
+    })
+  }
+
   return (
-    <ul className="flex items-center gap-3">
+    <ul
+      className={`${column ? 'flex-col' : 'flex-row'} flex items-center gap-3`}
+    >
       {socialList.map(({ name, url, icon }) => {
         return (
-          name !== 'Portfolio' && (
-            <SocialMedia key={name} name={name} url={url} icon={icon} />
-          )
+          <li key={name}>
+            <a
+              href={url}
+              className="hover flex gap-2"
+              title={`My ${name}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="bg-transparent text-2xl">{icon}</div>
+              <span className={`${socialLabel ? 'not-sr-only' : 'sr-only'}`}>
+                {name}
+              </span>
+            </a>
+          </li>
         )
       })}
     </ul>
