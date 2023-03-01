@@ -94,6 +94,10 @@ ul li a.active {
   @apply -mx-1 rounded-md p-1 transition-all duration-200 hover:bg-b-500/30 hover:text-b-200;
 }
 
+.container {
+  @apply mx-auto flex  min-h-0 w-full max-w-2xl flex-1 flex-col p-4 xl:max-w-3xl;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

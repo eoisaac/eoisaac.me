@@ -30,7 +30,7 @@ export const useLanguage = (): UseLanguageProps => {
   useEffect(() => {
     changeLanguage(language)
     localStorage.setItem('language', language)
-  }, [language])
+  }, [changeLanguage, language])
 
   const toggleLanguage = () => {
     setLanguage((prevTheme) => (prevTheme === 'enUS' ? 'ptBR' : 'enUS'))

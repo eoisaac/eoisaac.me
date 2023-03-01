@@ -7,10 +7,7 @@ export const NotFound = () => {
   const { t } = useTranslation()
 
   return (
-    <div
-      className="mx-auto grid max-w-2xl flex-1 place-items-center p-4
-      xl:max-w-3xl"
-    >
+    <div className="container flex items-center justify-center">
       <article className="flex flex-col items-center justify-center gap-2">
         <header className="flex flex-wrap items-end justify-center gap-2">
           <strong

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { ArrowSquareOut, GithubLogo } from 'phosphor-react'
 import { Repository } from '../@types/app'
 import { Button } from './Button'

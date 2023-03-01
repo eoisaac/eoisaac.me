@@ -1,8 +1,8 @@
 import { List, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { Button } from '../components/Button'
-import { useTranslation } from 'react-i18next'
 
 interface MenuLinkProps {
   label: string
@@ -46,10 +46,10 @@ export const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 z-30 flex w-full items-center justify-between
+        className={`fixed top-0 z-50 flex w-full items-center justify-between
         border-b ${isScrolling ? 'border-b-600' : 'border-b-transparent'}
-        bg-dark firefox:bg-opacity-100 bg-opacity-30 backdrop-blur-lg
-        backdrop-saturate-150 backdrop-filter`}
+        bg-dark bg-opacity-30 backdrop-blur-lg backdrop-saturate-150
+        backdrop-filter`}
       >
         <nav
           className="mx-auto flex w-full max-w-2xl items-center justify-between

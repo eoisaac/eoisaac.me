@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom'
+import { Footer } from './Footer'
 
 export const FullPageLayout = () => {
   return (
@@ -7,6 +8,7 @@ export const FullPageLayout = () => {
     bg-b-dark"
     >
       <Outlet />
+      <Footer />
     </div>
   )
 }
