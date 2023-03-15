@@ -59,7 +59,7 @@ export const ToastContextProvider = ({
     >
       <ul
         ref={toastListRef}
-        className="fixed z-40 flex w-full max-w-xs flex-col gap-1 sm:right-4 
+        className="fixed z-[9999] flex w-full max-w-xs flex-col gap-1 sm:right-4 
       sm:top-4 sm:gap-4"
       >
         {toastList.map(
